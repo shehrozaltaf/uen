@@ -1169,8 +1169,8 @@ class Spc extends MX_Controller
 	
 	function randomized_households(){
 
-		$cluster = $this->uri->segment(3);
-		$this->data['get_list'] = $this->spc->query("select hh02, sno, concat(tabNO, '-', substring(compid, 8, 8)) as hhno from ml_randomised where hh02 = '$cluster' order by cast(sno as int)");
+        $cluster = $this->uri->segment(3);
+        $this->data['get_list'] = $this->spc->query("select hh02, sno, concat(tabNO, '-', substring(compid, 8, 8)) as hhno from ml_randomised where hh02 = '$cluster' order by cast(sno as int)");
 
 		//var_dump($this->data['get_list']->result());die();
 

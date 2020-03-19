@@ -58,9 +58,10 @@
                 </thead>
                    
                 <tbody>
-                  <?php $this->load->model('master_model'); foreach($get_list->result() as $row){ 
-                        
-                        $get_status = $this->master_model->get_status($row->hh02, $row->hhno);
+                <?php $this->load->model('master_model');
+                foreach ($get_list->result() as $row) {
+
+                    $get_status = $this->master_model->get_status_shehroz($row->hh02, $row->hhno);
 
                         if($get_status == 0){
                           $status = '<span class="label label-danger">Not Collected Yet</span>';
