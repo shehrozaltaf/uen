@@ -122,8 +122,15 @@ class Master_model extends CI_Model
     {
 
         $ml = $this->load->database('uen_ml', TRUE);
+//        echo "select username from listings where hh02 = '$hh02' and hh03 = '$hh03' and hh07 = '$hh07' and tabNo = '$tabNo'";
+
         $data = $ml->query("select username from listings where hh02 = '$hh02' and hh03 = '$hh03' and hh07 = '$hh07' and tabNo = '$tabNo'")->row();
-        return $data->username;
+        if (isset($data->username) && $data->username != '') {
+            $username = $data->username;
+        } else {
+            $username = '';
+        }
+        return $username;
     }
 
 
