@@ -79,12 +79,32 @@ class Spc extends MX_Controller
 			from clusters where cluster_no not like '%501' and cluster_no not like '%502' and cluster_no != 'null' and col_flag = '0'
 			group by dist_id order by dist_id");
 
-            $completed_clusters = $this->spc->query("select c.dist_id, c.cluster_no,
+            /*$completed_clusters = $this->spc->query("select c.dist_id, c.cluster_no,
 			(select count(*) from ml_randomised where dist_id = c.dist_id and hh02 = c.cluster_no) as hh_randomized,
 			(select count(distinct hhno) from forms where dist_id = c.dist_id and cluster_code = c.cluster_no and istatus in('1', '2', '3', '4', '5', '6', '7', '96') and username not in('afg12345','user0001','user0113','user0123','user0211','user0234','user0252','user0414','user0432', 'user0434')) as hh_collected
 			from clusters c
 			where c.cluster_no not like '%501' and c.cluster_no not like '%502' and c.cluster_no != 'null' and c.randomized = '1' and c.col_flag = '0'
+			group by c.dist_id, c.cluster_no order by c.dist_id");*/
+
+            $completed_clusters = $this->spc->query("select c.dist_id, c.cluster_no,
+			(select count(*) from ml_randomised where dist_id = c.dist_id and hh02 = c.cluster_no) as hh_randomized,
+			(SELECT 	COUNT (DISTINCT f.hhno) FROM
+	dbo.clusters AS cc
+INNER JOIN dbo.familymembers AS fm ON cc.cluster_no = fm.clusterno
+INNER JOIN dbo.mwra_preg AS mw ON cc.cluster_no = mw.cluster_no
+INNER JOIN dbo.child_table ct ON cc.cluster_no = ct.cluster_no
+INNER JOIN dbo.kish_mwra km ON cc.cluster_no = km.cluster_no
+INNER JOIN dbo.forms AS f ON cc.cluster_no = f.cluster_code
+
+ where dist_id = c.dist_id and f.cluster_code = c.cluster_no  and f.username not in('afg12345','user0001','user0113','user0123','user0211','user0234','user0252',
+ 'user0414','user0432', 'user0434') 
+AND cc.cluster_no NOT LIKE '%501' 
+AND cc.cluster_no NOT LIKE '%502'    
+AND cc.cluster_no != 'null' ) as hh_collected
+			from clusters c
+			where c.cluster_no not like '%501' and c.cluster_no not like '%502' and c.cluster_no != 'null' and c.randomized = '1' and c.col_flag = '0'
 			group by c.dist_id, c.cluster_no order by c.dist_id");
+
 
             $cc_d113 = 0;
             $cc_d123 = 0;
@@ -95,8 +115,16 @@ class Spc extends MX_Controller
             $cc_d432 = 0;
             $cc_d434 = 0;
 
-            foreach ($completed_clusters->result() as $r1) {
+            $rc_d113 = 0;
+            $rc_d123 = 0;
+            $rc_d211 = 0;
+            $rc_d234 = 0;
+            $rc_d252 = 0;
+            $rc_d414 = 0;
+            $rc_d432 = 0;
+            $rc_d434 = 0;
 
+            foreach ($completed_clusters->result() as $r1) {
                 if ($r1->dist_id == '113' and $r1->hh_randomized == $r1->hh_collected) {
                     $cc_d113 = $cc_d113 + 1;
                 } else if ($r1->dist_id == '123' and $r1->hh_randomized == $r1->hh_collected) {
@@ -114,6 +142,24 @@ class Spc extends MX_Controller
                 } else if ($r1->dist_id == '434' and $r1->hh_randomized == $r1->hh_collected) {
                     $cc_d434 = $cc_d434 + 1;
                 }
+
+                if ($r1->dist_id == '113' and $r1->hh_collected < $r1->hh_randomized) {
+                    $rc_d113 = $rc_d113 + 1;
+                } else if ($r1->dist_id == '123' and $r1->hh_collected < $r1->hh_randomized) {
+                    $rc_d123 = $rc_d123 + 1;
+                } else if ($r1->dist_id == '211' and $r1->hh_collected < $r1->hh_randomized) {
+                    $rc_d211 = $rc_d211 + 1;
+                } else if ($r1->dist_id == '234' and $r1->hh_collected < $r1->hh_randomized) {
+                    $rc_d234 = $rc_d234 + 1;
+                } else if ($r1->dist_id == '252' and $r1->hh_collected < $r1->hh_randomized) {
+                    $rc_d252 = $rc_d252 + 1;
+                } else if ($r1->dist_id == '414' and $r1->hh_collected < $r1->hh_randomized) {
+                    $rc_d414 = $rc_d414 + 1;
+                } else if ($r1->dist_id == '432' and $r1->hh_collected < $r1->hh_randomized) {
+                    $rc_d432 = $rc_d432 + 1;
+                } else if ($r1->dist_id == '434' and $r1->hh_collected < $r1->hh_randomized) {
+                    $rc_d434 = $rc_d434 + 1;
+                }
             }
 
             $this->data['cc_d113'] = $cc_d113;
@@ -125,45 +171,45 @@ class Spc extends MX_Controller
             $this->data['cc_d432'] = $cc_d432;
             $this->data['cc_d434'] = $cc_d434;
 
+
             $this->data['cc_total'] = $cc_d113 + $cc_d123 + $cc_d211 + $cc_d234 + $cc_d252 + $cc_d414 + $cc_d432 + $cc_d434;
+            /*
+                       $remaining_clusters = $this->spc->query("select c.dist_id, c.cluster_no,
+                       (select count(*) from ml_randomised where dist_id = c.dist_id and hh02 = c.cluster_no) as hh_randomized,
+                       (select count(distinct hhno) from forms where dist_id = c.dist_id and cluster_code = c.cluster_no and istatus in('1', '2', '3', '4', '5', '6', '7', '96') and username not in('afg12345','user0001','user0113','user0123','user0211','user0234','user0252','user0414','user0432', 'user0434')) as hh_collected
+                       from clusters c
+                       where c.cluster_no not like '%501' and c.cluster_no not like '%502' and c.cluster_no != 'null' and c.randomized = '1' and c.col_flag = '0'
+                       group by c.dist_id, c.cluster_no order by c.dist_id");
 
+                       $rc_d113 = 0;
+                       $rc_d123 = 0;
+                       $rc_d211 = 0;
+                       $rc_d234 = 0;
+                       $rc_d252 = 0;
+                       $rc_d414 = 0;
+                       $rc_d432 = 0;
+                       $rc_d434 = 0;
 
-            $remaining_clusters = $this->spc->query("select c.dist_id, c.cluster_no,
-			(select count(*) from ml_randomised where dist_id = c.dist_id and hh02 = c.cluster_no) as hh_randomized,
-			(select count(distinct hhno) from forms where dist_id = c.dist_id and cluster_code = c.cluster_no and istatus in('1', '2', '3', '4', '5', '6', '7', '96') and username not in('afg12345','user0001','user0113','user0123','user0211','user0234','user0252','user0414','user0432', 'user0434')) as hh_collected
-			from clusters c
-			where c.cluster_no not like '%501' and c.cluster_no not like '%502' and c.cluster_no != 'null' and c.randomized = '1' and c.col_flag = '0'
-			group by c.dist_id, c.cluster_no order by c.dist_id");
+                       foreach ($remaining_clusters->result() as $r2) {
 
-            $rc_d113 = 0;
-            $rc_d123 = 0;
-            $rc_d211 = 0;
-            $rc_d234 = 0;
-            $rc_d252 = 0;
-            $rc_d414 = 0;
-            $rc_d432 = 0;
-            $rc_d434 = 0;
-
-            foreach ($remaining_clusters->result() as $r2) {
-
-                if ($r2->dist_id == '113' and $r2->hh_collected < $r2->hh_randomized) {
-                    $rc_d113 = $rc_d113 + 1;
-                } else if ($r2->dist_id == '123' and $r2->hh_collected < $r2->hh_randomized) {
-                    $rc_d123 = $rc_d123 + 1;
-                } else if ($r2->dist_id == '211' and $r2->hh_collected < $r2->hh_randomized) {
-                    $rc_d211 = $rc_d211 + 1;
-                } else if ($r2->dist_id == '234' and $r2->hh_collected < $r2->hh_randomized) {
-                    $rc_d234 = $rc_d234 + 1;
-                } else if ($r2->dist_id == '252' and $r2->hh_collected < $r2->hh_randomized) {
-                    $rc_d252 = $rc_d252 + 1;
-                } else if ($r2->dist_id == '414' and $r2->hh_collected < $r2->hh_randomized) {
-                    $rc_d414 = $rc_d414 + 1;
-                } else if ($r2->dist_id == '432' and $r2->hh_collected < $r2->hh_randomized) {
-                    $rc_d432 = $rc_d432 + 1;
-                } else if ($r2->dist_id == '434' and $r2->hh_collected < $r2->hh_randomized) {
-                    $rc_d434 = $rc_d434 + 1;
-                }
-            }
+                           if ($r2->dist_id == '113' and $r2->hh_collected < $r2->hh_randomized) {
+                               $rc_d113 = $rc_d113 + 1;
+                           } else if ($r2->dist_id == '123' and $r2->hh_collected < $r2->hh_randomized) {
+                               $rc_d123 = $rc_d123 + 1;
+                           } else if ($r2->dist_id == '211' and $r2->hh_collected < $r2->hh_randomized) {
+                               $rc_d211 = $rc_d211 + 1;
+                           } else if ($r2->dist_id == '234' and $r2->hh_collected < $r2->hh_randomized) {
+                               $rc_d234 = $rc_d234 + 1;
+                           } else if ($r2->dist_id == '252' and $r2->hh_collected < $r2->hh_randomized) {
+                               $rc_d252 = $rc_d252 + 1;
+                           } else if ($r2->dist_id == '414' and $r2->hh_collected < $r2->hh_randomized) {
+                               $rc_d414 = $rc_d414 + 1;
+                           } else if ($r2->dist_id == '432' and $r2->hh_collected < $r2->hh_randomized) {
+                               $rc_d432 = $rc_d432 + 1;
+                           } else if ($r2->dist_id == '434' and $r2->hh_collected < $r2->hh_randomized) {
+                               $rc_d434 = $rc_d434 + 1;
+                           }
+                       }*/
 
             $this->data['rc_d113'] = $rc_d113;
             $this->data['rc_d123'] = $rc_d123;
@@ -607,7 +653,6 @@ class Spc extends MX_Controller
                 $cluster_type = substr($district_cluster_type, 5, 1);
 
                 if ($cluster_type == 'c') {
-
                     $this->data['get_list'] = $this->spc->query("select l.enumcode, l.hh02,
 					(select count(*) from(select distinct hh03, tabNo from listings where hh04 in('1','2') and enumcode = l.enumcode and hh02 = l.hh02) as structures) as structures,
 					(select count(*) from(select distinct hh03, tabNo from listings where hh04 = '1' and enumcode = l.enumcode and hh02 = l.hh02) as structures) as residential_structures,
@@ -627,7 +672,6 @@ class Spc extends MX_Controller
 					order by l.enumcode,l.hh02");
 
                 } else if ($cluster_type == 'i') {
-
                     $this->data['get_list'] = $this->spc->query("select l.enumcode, l.hh02,
 					(select count(*) from(select distinct hh03, tabNo from listings where hh04 in('1','2') and enumcode = l.enumcode and hh02 = l.hh02) as structures) as structures,
 					(select count(*) from(select distinct hh03, tabNo from listings where hh04 = '1' and enumcode = l.enumcode and hh02 = l.hh02) as structures) as residential_structures,
@@ -647,7 +691,6 @@ class Spc extends MX_Controller
 					order by l.enumcode,l.hh02");
 
                 } else if ($cluster_type == 'r') {
-
                     $this->data['get_list'] = $this->spc->query("select c.dist_id as enumcode, c.cluster_no as hh02,
 					(select count(*) from(select distinct hh03, tabNo from listings where hh04 in('1','2') and hh02 = c.cluster_no) as structures) as structures,
 					(select count(*) from(select distinct hh03, tabNo from listings where hh04 = '1' and hh02 = c.cluster_no) as structures) as residential_structures,
