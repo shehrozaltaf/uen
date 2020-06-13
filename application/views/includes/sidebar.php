@@ -73,8 +73,10 @@
         
         <li <?php if($this->uri->segment(1) == 'spc' and $this->uri->segment(2) == 'index'){?> class="active" <?php } ?>><a href="<?php echo base_url();?>spc/index"><i class="fa fa-bar-chart"></i> <span>Midline Linelisting</span></a></li>
         <li <?php if($this->uri->segment(1) == 'spc' and $this->uri->segment(2) == 'ml_dashboard'){?> class="active" <?php } ?>><a href="<?php echo base_url();?>spc/ml_dashboard"><i class="fa fa-bar-chart"></i> <span>Midline Collection</span></a></li>
-        
-        <?php
+          <li><a href="<?php echo base_url(); ?>index.php/Forms/submitForm"><i class="fa fa-file"></i> <span>Midline Survey Questionnaire</span></a>
+          </li>
+
+          <?php
           $id 	  = $this->users->get_user()->id;
           if($id == 1 or $id == 2 or $id == 3){
         ?>
@@ -270,12 +272,8 @@
         
       </ul>
       <?php //} ?>
-      
-      
-      
-      
-       
-      
+
+
     </section>
     <!-- /.sidebar -->
   </aside>
