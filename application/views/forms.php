@@ -60,15 +60,7 @@
     }
 
 </style>
-<script>
-    function showQuestions(skipQues) {
-        $('.' + skipQues).removeClass('hide');
-    }
 
-    function skipQuestions(skipQues) {
-        $('.' + skipQues).addClass('hide');
-    }
-</script>
 <div class="wrapper">
     <?php echo $this->load->view('includes/header'); ?>
     <?php echo $this->load->view('includes/sidebar'); ?>
@@ -93,154 +85,168 @@
                                     <div class="row">
                                         <div class="col-md-12">
                                             <div class="form-group">
-                                                <label for="crf_name" class="urdu">کلسٹر نمبر</label>
-                                                <input type="text" id="A101" class="form-control"
-                                                       placeholder="کلسٹر نمبر" name="A101">
+                                                <label for="crf_name" class="urdu">
+                                                    <small>a101 :</small>
+                                                    کلسٹر نمبر</label>
+                                                <input type="text" id="a101" class="form-control" maxlength="6"
+                                                       placeholder="کلسٹر نمبر" name="a101">
                                             </div>
 
                                         </div>
                                     </div>
                                     <hr>
 
-                                    <div class="row urdu">
-                                        <div class="col-md-12">
-                                            <h4>
-                                                <small>a102 :</small>
-                                                کلسٹرکی قسم
-                                            </h4>
-                                            <input type="Radio" name="a102"
-                                                   value="1" id="a102a" required>
-                                            جن کلسٹرز میں ایل ایچ ڈبلیو دورہ کرتی ہے <br>
-                                            <input type="Radio" name="a102"
-                                                   value="2" id="a102b" required>
-                                            ایل ایچ ڈبلیو دورہ نہیں کرتی <br></div>
-                                    </div>
-                                    <hr>
-                                    <div class="row urdu">
-                                        <div class="col-md-12">
-                                            <h4>
-                                                <small>a104 :</small>
-                                                صوبہ کا نام
-                                            </h4>
-                                            <input type="Radio" name="a104"
-                                                   value="1" id="a104a" required>
-                                            بلوچستان<br>
-                                            <input type="Radio" name="a104"
-                                                   value="2" id="a104b" required>
-                                            پنجاب <br>
-                                            <input type="Radio" name="a104"
-                                                   value="3" id="a104c" required>
-                                            سندھ <br>
-                                        </div>
-                                    </div>
-                                    <hr>
-
-                                    <div class="row urdu">
-                                        <div class="col-md-12">
-                                            <h4>
-                                                <small>a105 :</small>
-                                                ضلع کا نام
-                                            </h4>
-                                            <input type="Radio" name="a105"
-                                                   value="1" id="a105a" required>
-                                            جعفرآباد <br>
-                                            <input type="Radio" name="a105"
-                                                   value="2" id="a105b" required>
-                                            نصیرآباد <br>
-                                            <input type="Radio" name="a105"
-                                                   value="3" id="a105c" required>
-                                            لسبیلہ <br>
-                                        </div>
-                                    </div>
-                                    <hr>
                                     <div class="row">
                                         <div class="col-md-12">
                                             <div class="form-group">
-                                                <label for="a106" class="urdu">تحصیل /تعلقہ کا نام</label>
-                                                <input type="text" id="a106" class="form-control" name="a106">
+                                                <label for="hhno" class="urdu">
+                                                    <small>hhno :</small>
+                                                    گھریلو نمبر</label>
+                                                <input type="text" id="hhno" class="form-control" name="hhno">
                                             </div>
 
                                         </div>
                                     </div>
                                     <hr>
-                                    <div class="row">
-                                        <div class="col-md-12">
-                                            <div class="form-group">
-                                                <label for="a107" class="urdu">یونین کونسل کا نام</label>
-                                                <input type="text" id="a107" class="form-control" name="a107">
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <hr>
-                                    <div class="row urdu">
-                                        <div class="col-md-12">
-                                            <h4>
-                                                <small>a108 :</small>
-                                                جگہ /تحقیق کا مقام
-                                            </h4>
-                                            <input type="Radio" name="a108"
-                                                   value="1" id="a108a" required>
-                                            شہری <br>
-                                            <input type="Radio" name="a108"
-                                                   value="2" id="a108b" required>
-                                            دیہی <br>
-                                        </div>
-                                    </div>
-                                    <hr>
-                                    <div class="row urdu">
-                                        <div class="col-md-12">
-                                            <h4>
-                                                <small>a112 :</small>
-                                                گھر کا نمبر/خاندان نمبر:
-                                            </h4>
-                                            <input type="Radio" name="a112"
-                                                   value="1" id="a112a" required>
-                                            ایل ایچ ڈبلیوجن کلسٹرز میں موجود ہے وہاںکا خاندان نمبر <br>
-                                            <input type="Radio" name="a112"
-                                                   value="2" id="a112b" required>
-                                            جن کلسٹرز میں ایل ایچ ڈبلیو موجود نہیں وہاں کا مکان نمبر <br>
-                                            <input type="Radio" name="a112"
-                                                   value="3" id="a112c" required>
-                                            دستیاب نہیں <br>
-                                        </div>
-                                    </div>
-                                    <hr>
-                                    <div class="row">
-                                        <div class="col-md-12">
-                                            <div class="form-group">
-                                                <label for="a113" class="urdu">
-                                                    <small>a111 :</small>
-                                                    سڑک</label>
-                                                <p>سڑک کا نام درج کرنے کے لئے ٹیکسٹ باکس کا استعمال کریں</p>
-                                                <input type="text" id="a111" class="form-control" name="a111">
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <hr>
-                                    <div class="row">
-                                        <div class="col-md-12">
-                                            <div class="form-group">
-                                                <label for="a110" class="urdu">
-                                                    <small>a110 :</small>
-                                                    بلاک/محلہ</label>
-                                                <p>]بلاک /محلہ کا نام درج کرنے کے لئے ٹیکسٹ باکس کا استعمال کریں:</p>
-                                                <input type="text" id="a110" class="form-control" name="a110">
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <hr>
-                                    <div class="row">
-                                        <div class="col-md-12">
-                                            <div class="form-group">
-                                                <label for="a109" class="urdu">
-                                                    <small>a109 :</small>
-                                                    گاؤں</label>
-                                                <p>گاؤں کا نام درج کرنے کے لئے ٹیکسٹ باکس کا استعمال کریں </p>
-                                                <input type="text" id="a109" class="form-control" name="a109">
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <hr>
+                                    <!--  <div class="row urdu">
+                                          <div class="col-md-12">
+                                              <h4>
+                                                  <small>a102 :</small>
+                                                  کلسٹرکی قسم
+                                              </h4>
+                                              <input type="Radio" name="a102"
+                                                     value="1" id="a102a" required>
+                                              جن کلسٹرز میں ایل ایچ ڈبلیو دورہ کرتی ہے <br>
+                                              <input type="Radio" name="a102"
+                                                     value="2" id="a102b" required>
+                                              ایل ایچ ڈبلیو دورہ نہیں کرتی <br></div>
+                                      </div>
+                                      <hr>
+                                      <div class="row urdu">
+                                          <div class="col-md-12">
+                                              <h4>
+                                                  <small>a104 :</small>
+                                                  صوبہ کا نام
+                                              </h4>
+                                              <input type="Radio" name="a104"
+                                                     value="1" id="a104a" required>
+                                              بلوچستان<br>
+                                              <input type="Radio" name="a104"
+                                                     value="2" id="a104b" required>
+                                              پنجاب <br>
+                                              <input type="Radio" name="a104"
+                                                     value="3" id="a104c" required>
+                                              سندھ <br>
+                                          </div>
+                                      </div>
+                                      <hr>
+
+                                      <div class="row urdu">
+                                          <div class="col-md-12">
+                                              <h4>
+                                                  <small>a105 :</small>
+                                                  ضلع کا نام
+                                              </h4>
+                                              <input type="Radio" name="a105"
+                                                     value="1" id="a105a" required>
+                                              جعفرآباد <br>
+                                              <input type="Radio" name="a105"
+                                                     value="2" id="a105b" required>
+                                              نصیرآباد <br>
+                                              <input type="Radio" name="a105"
+                                                     value="3" id="a105c" required>
+                                              لسبیلہ <br>
+                                          </div>
+                                      </div>
+                                      <hr>
+                                      <div class="row">
+                                          <div class="col-md-12">
+                                              <div class="form-group">
+                                                  <label for="a106" class="urdu">تحصیل /تعلقہ کا نام</label>
+                                                  <input type="text" id="a106" class="form-control" name="a106">
+                                              </div>
+
+                                          </div>
+                                      </div>
+                                      <hr>
+                                      <div class="row">
+                                          <div class="col-md-12">
+                                              <div class="form-group">
+                                                  <label for="a107" class="urdu">یونین کونسل کا نام</label>
+                                                  <input type="text" id="a107" class="form-control" name="a107">
+                                              </div>
+                                          </div>
+                                      </div>
+                                      <hr>
+                                      <div class="row urdu">
+                                          <div class="col-md-12">
+                                              <h4>
+                                                  <small>a108 :</small>
+                                                  جگہ /تحقیق کا مقام
+                                              </h4>
+                                              <input type="Radio" name="a108"
+                                                     value="1" id="a108a" required>
+                                              شہری <br>
+                                              <input type="Radio" name="a108"
+                                                     value="2" id="a108b" required>
+                                              دیہی <br>
+                                          </div>
+                                      </div>
+                                      <hr>
+                                      <div class="row urdu">
+                                          <div class="col-md-12">
+                                              <h4>
+                                                  <small>a112 :</small>
+                                                  گھر کا نمبر/خاندان نمبر:
+                                              </h4>
+                                              <input type="Radio" name="a112"
+                                                     value="1" id="a112a" required>
+                                              ایل ایچ ڈبلیوجن کلسٹرز میں موجود ہے وہاںکا خاندان نمبر <br>
+                                              <input type="Radio" name="a112"
+                                                     value="2" id="a112b" required>
+                                              جن کلسٹرز میں ایل ایچ ڈبلیو موجود نہیں وہاں کا مکان نمبر <br>
+                                              <input type="Radio" name="a112"
+                                                     value="3" id="a112c" required>
+                                              دستیاب نہیں <br>
+                                          </div>
+                                      </div>
+                                      <hr>
+                                      <div class="row">
+                                          <div class="col-md-12">
+                                              <div class="form-group">
+                                                  <label for="a113" class="urdu">
+                                                      <small>a111 :</small>
+                                                      سڑک</label>
+                                                  <p>سڑک کا نام درج کرنے کے لئے ٹیکسٹ باکس کا استعمال کریں</p>
+                                                  <input type="text" id="a111" class="form-control" name="a111">
+                                              </div>
+                                          </div>
+                                      </div>
+                                      <hr>
+                                      <div class="row">
+                                          <div class="col-md-12">
+                                              <div class="form-group">
+                                                  <label for="a110" class="urdu">
+                                                      <small>a110 :</small>
+                                                      بلاک/محلہ</label>
+                                                  <p>]بلاک /محلہ کا نام درج کرنے کے لئے ٹیکسٹ باکس کا استعمال کریں:</p>
+                                                  <input type="text" id="a110" class="form-control" name="a110">
+                                              </div>
+                                          </div>
+                                      </div>
+                                      <hr>
+                                      <div class="row">
+                                          <div class="col-md-12">
+                                              <div class="form-group">
+                                                  <label for="a109" class="urdu">
+                                                      <small>a109 :</small>
+                                                      گاؤں</label>
+                                                  <p>گاؤں کا نام درج کرنے کے لئے ٹیکسٹ باکس کا استعمال کریں </p>
+                                                  <input type="text" id="a109" class="form-control" name="a109">
+                                              </div>
+                                          </div>
+                                      </div>
+                                      <hr>
                                     <p>اسلام وعلیکم،</p>
                                     <p> میرا نام(انٹرویو کرنے والے کا نام)۔۔۔۔۔۔۔۔۔۔۔۔۔ ہے اور میں سینٹر آف ایکسلنس
                                         وومن اینڈ چائلڈ ہیلتھ آغا خان یونیورسٹی کراچی کے ساتھ کام کرتی ہوں جو کہ وفاقی
@@ -297,7 +303,7 @@
                                     </div>
                                     <hr>
 
-
+-->
                                     <p class="myheading"> سیکشن ایف : حمل کی
                                         دیکھ بھال
                                     </p>
@@ -595,14 +601,15 @@
                                                 Date of delivery
 
                                             </h4>
-                                            <input type="input" name="e106a"
-                                                   value="1" id="e106a" required>
+                                            <input type="input" name="e106a" maxlength="2" min="0" max="31" id="e106a"
+                                                   required>
                                             دن
                                             <br>
-                                            <input type="input" name="e106b" id="e106b" required>
+                                            <input type="input" max="12" name="e106b" maxlength="2" min="0" id="e106b"
+                                                   required>
                                             مہینہ
                                             <br>
-                                            <input type="input" name="e106c" id="e106c" required>
+                                            <input type="input" name="e106c" maxlength="4" id="e106c" min="0" required>
                                             سال
                                             <br>
 
@@ -1658,3 +1665,50 @@
     <?php echo $this->load->view('includes/footer'); ?>
 </div>
 <?php echo $this->load->view('includes/scripts'); ?>
+<script>
+    // Numeric only control handler
+    jQuery.fn.ForceNumericOnly =
+        function () {
+            return this.each(function () {
+                $(this).keydown(function (e) {
+                    var key = e.charCode || e.keyCode || 0;
+                    // allow backspace, tab, delete, enter, arrows, numbers and keypad numbers ONLY
+                    // home, end, period, and numpad decimal
+                    return (
+                        key == 8 ||
+                        key == 9 ||
+                        key == 13 ||
+                        key == 46 ||
+                        key == 110 ||
+                        key == 190 ||
+                        (key >= 35 && key <= 40) ||
+                        (key >= 48 && key <= 57) ||
+                        (key >= 96 && key <= 105));
+                });
+            });
+        };
+
+    $(document).ready(function () {
+
+
+        $("#a101").ForceNumericOnly();
+        $("#e106a").ForceNumericOnly();
+        $("#e106b").ForceNumericOnly();
+        $("#e106c").ForceNumericOnly();
+
+        $("#a101").keyup(function () {
+            var number = $("#a101").val();
+            if (number.length >= 6) {
+                $("#hhno").val(111);
+            }
+        });
+    });
+
+    function showQuestions(skipQues) {
+        $('.' + skipQues).removeClass('hide');
+    }
+
+    function skipQuestions(skipQues) {
+        $('.' + skipQues).addClass('hide');
+    }
+</script>
