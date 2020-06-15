@@ -93,7 +93,16 @@
                                     </div>
                                     <script>
                                         function skipQuestion(selectOption, skipQues) {
-                                            alert(1);
+                                            $('#' + selectOption).addClass('hide');
+                                            $('.' + skipQues).removeClass('hide');
+                                        }
+
+                                        function showQuestions(skipQues) {
+                                            $('.' + skipQues).removeClass('hide');
+                                        }
+
+                                        function skipQuestions(skipQues) {
+                                            $('.' + skipQues).addClass('hide');
                                         }
                                     </script>
                                     <div class="row">
@@ -119,15 +128,17 @@
                                                 کیا آپ نے اپنے آخری حمل کے دوران (نام) کی پیدائش سے قبل حمل کی دیکھ بھال
                                                 کے لئے کسی سے معائنہ یا چیک اپ کروایا تھا؟
                                             </h4>
-                                            <input type="Radio" name="f101" value="1" id="f101y" required>
+                                            <input type="Radio" name="f101" value="1" id="f101y"
+                                                   onclick="skipQuestions('f101a')"
+                                                   required>
                                             ہاں<br>
-                                            <input type="Radio" name="f101" onclick="skipQuestion('f101','f101a')"
+                                            <input type="Radio" name="f101" onclick="showQuestions('f101a')"
                                                    value="2" id="f101n" required>
                                             نہیں<br>
                                         </div>
                                     </div>
                                     <hr>
-                                    <div class="row urdu">
+                                    <div class="row urdu f101a hide">
                                         <div class="col-md-12">
                                             <h4>
                                                 <small>f101a :</small>
@@ -202,40 +213,40 @@
                                                 کیا گزشتہ حمل کے دوران(ایل ایچ ڈبلیو) لیڈی ہیلتھ ورکرنے کرونا کی وبا کے
                                                 دوران آپ کے گھر کا دورہ کیا تھا
                                             </h4>
-                                            <input type="Radio" name="f121a"
+                                            <input type="Radio" name="f121a" onclick="skipQuestions('f121b')"
                                                    value="1" id="f121aa" required>
                                             ہاں <br>
-                                            <input type="Radio" name="f121a" onclick="skipQuestion('f121b','f121b')"
+                                            <input type="Radio" name="f121a" onclick="showQuestions('f121b')"
                                                    value="2" id="f121ab" required>
                                             نہیں <br>
                                         </div>
                                     </div>
                                     <hr>
-                                    <div class="row urdu">
+                                    <div class="row urdu hide f121b">
                                         <div class="col-md-12">
                                             <h4>
                                                 <small>f121b :</small>
                                                 لیڈی ہیلتھ ورکر کا وزٹ نہیں کرنے کا سبب کیا تھاا
                                             </h4>
-                                            <input type="Radio" name="f121b"
-                                                   value="1" id="f121ba" required>
+                                            <input type="checkbox" name="f121b"
+                                                   value="1" id="f121ba">
                                             ایل ایچھ ڈبلیو اکثر وزت پرنہیں آتی <br>
-                                            <input type="Radio" name="f121b"
-                                                   value="2" id="f121bb" required>
+                                            <input type="checkbox" name="f121b"
+                                                   value="2" id="f121bb">
                                             ایل ایچھ ڈبلیوکرونا کی وجہ سےوزٹ نہیں کرسکی <br>
-                                            <input type="Radio" name="f121b"
-                                                   value="3" id="f121bc" required>ایل ایچھ ڈبلیوآئی مگر ہم نے گھر میں
+                                            <input type="checkbox" name="f121b"
+                                                   value="3" id="f121bc">ایل ایچھ ڈبلیوآئی مگر ہم نے گھر میں
                                             آنے نہیں دیا <br>
-                                            <input type="Radio" name="f121b"
-                                                   value="31" id="f121bd" required> ایل ایچھ ڈبلیونے ماسک نہیں پہنا ہوا
+                                            <input type="checkbox" name="f121b"
+                                                   value="31" id="f121bd"> ایل ایچھ ڈبلیونے ماسک نہیں پہنا ہوا
                                             تھا
                                             <br>
-                                            <input type="Radio" name="f121b"
-                                                   value="32" id="f121be" required> کرونا کا ڈریا خوف <br>
-                                            <input type="Radio" name="f121b"
-                                                   value="33" id="f121b" required>سماجی مفاصلا <br>
-                                            <input type="Radio" name="f121b"
-                                                   value="34" id="f121bf" required>حفاظتی سامان گھر پر موجود نہیں تھا
+                                            <input type="checkbox" name="f121b"
+                                                   value="32" id="f121be"> کرونا کا ڈریا خوف <br>
+                                            <input type="checkbox" name="f121b"
+                                                   value="33" id="f121b">سماجی مفاصلا <br>
+                                            <input type="checkbox" name="f121b"
+                                                   value="34" id="f121bf">حفاظتی سامان گھر پر موجود نہیں تھا
                                             <br>
 
                                         </div>
@@ -249,16 +260,16 @@
                                                 کیا آپ نے اوپر بیان کی گئیں خطرناک علامات /مسائل کی دیکھ بھال کے لئے
                                                 علاج کروایا تھا؟
                                             </h4>
-                                            <input type="Radio" name="f129" onclick="skipQuestion('f129','f130')"
+                                            <input type="Radio" name="f129" onclick="skipQuestions('f130')"
                                                    value="1" id="f129a" required>
                                             ہاں <br>
-                                            <input type="Radio" name="f129"
+                                            <input type="Radio" name="f129" onclick="showQuestions('f130')"
                                                    value="2" id="f129b" required>
                                             نہیں <br>
                                         </div>
                                     </div>
                                     <hr>
-                                    <div class="row urdu">
+                                    <div class="row urdu f130 hide">
                                         <div class="col-md-12">
                                             <h4>
                                                 <small>f130 :</small>
@@ -364,27 +375,27 @@
                                                 <small>g102 :</small>
                                                 (نام) کی پیدائش کہاں ہوئی تھی؟
                                             </h4>
-                                            <input type="Radio" name="g102" onclick="skipQuestion('g012a','g103')"
+                                            <input type="Radio" name="g102" onclick="showQuestions('g103')"
                                                    value="1" id="g102a" required>
                                             گھر پر
                                             <br>
-                                            <input type="Radio" name="g102"
+                                            <input type="Radio" name="g102" onclick="skipQuestions('g103')"
                                                    value="2" id="g102b" required>
                                             سرکاری مرکز صحت
                                             <br>
-                                            <input type="Radio" name="g102"
+                                            <input type="Radio" name="g102" onclick="skipQuestions('g103')"
                                                    value="3" id="g102c" required>
                                             نجی مرکز صحت
                                             <br>
-                                            <input type="Radio" name="g102"
+                                            <input type="Radio" name="g102" onclick="skipQuestions('g103')"
                                                    value="4" id="g102d" required>
                                             رفاہی ادارہ یا مرکز صحت
                                             <br>
-                                            <input type="Radio" name="g102"
+                                            <input type="Radio" name="g102" onclick="skipQuestions('g103')"
                                                    value="5" id="g102e" required>
                                             مرکز صحت جاتے ہوئے راستے میں
                                             <br>
-                                            <input type="Radio" name="g102"
+                                            <input type="Radio" name="g102" onclick="skipQuestions('g103')"
                                                    value="6" id="g102f" required>
                                             Birth stationمیٹرنیٹی ہوم
                                             <br>
@@ -415,7 +426,7 @@
                                         </div>
                                     </div>
                                     <hr>
-                                    <div class="row urdu">
+                                    <div class="row urdu g103 hide">
                                         <div class="col-md-12">
                                             <h4>
                                                 <small>g103 :</small>
@@ -486,7 +497,7 @@
                                                 ایل-ایچ-ڈبلیو موجود
                                                 تھی؟
                                             </h4>
-                                            <input type="Radio"
+                                            <input type="Radio" onclick="showQuestions('g125a')"
                                                    name="g125"
                                                    value="1"
                                                    id="g125a"
@@ -495,7 +506,7 @@
                                             <br>
                                             <input type="Radio"
                                                    name="g125"
-                                                   value="2" onclick="skipQuestion('g125b','g125a')"
+                                                   value="2" onclick="skipQuestions('g125a')"
                                                    id="g125b"
                                                    required>
                                             نہیں
@@ -503,31 +514,31 @@
                                         </div>
                                     </div>
                                     <hr>
-                                    <div class="row urdu">
+                                    <div class="row urdu g125a hide">
                                         <div class="col-md-12">
                                             <h4>
                                                 <small>g125a :</small>
                                                 لیڈی ہیلتھ ورکر کا وزٹ نہیں کرنے کا سبب کیا تھاا
                                             </h4>
                                             <input type="checkbox" name="g125a"
-                                                   value="1" id="g125aa" required>
+                                                   value="1" id="g125aa">
                                             ایل ایچھ ڈبلیو اکثر وزت پرنہیں آتی <br>
                                             <input type="checkbox" name="g125a"
-                                                   value="2" id="g125ab" required>
+                                                   value="2" id="g125ab">
                                             ایل ایچھ ڈبلیوکرونا کی وجہ سےوزٹ نہیں کرسکی <br>
                                             <input type="checkbox" name="g125a"
-                                                   value="3" id="g125ac" required>ایل ایچھ ڈبلیوآئی مگر ہم نے گھر میں
+                                                   value="3" id="g125ac">ایل ایچھ ڈبلیوآئی مگر ہم نے گھر میں
                                             آنے نہیں دیا <br>
                                             <input type="checkbox" name="g125a"
-                                                   value="31" id="g125ad" required> ایل ایچھ ڈبلیونے ماسک نہیں پہنا ہوا
+                                                   value="31" id="g125ad"> ایل ایچھ ڈبلیونے ماسک نہیں پہنا ہوا
                                             تھا
                                             <br>
                                             <input type="checkbox" name="g125a"
-                                                   value="32" id="g125ae" required> کرونا کا ڈریا خوف <br>
+                                                   value="32" id="g125ae"> کرونا کا ڈریا خوف <br>
                                             <input type="checkbox" name="g125a"
-                                                   value="33" id="g125af" required>سماجی مفاصلا <br>
+                                                   value="33" id="g125af">سماجی مفاصلا <br>
                                             <input type="checkbox" name="g125a"
-                                                   value="34" id="g125ag" required>حفاظتی سامان گھر پر موجود نہیں تھا
+                                                   value="34" id="g125ag">حفاظتی سامان گھر پر موجود نہیں تھا
                                             <br>
                                         </div>
                                     </div>
@@ -549,15 +560,15 @@
                                                 پوچھونگی۔ (نام) کی پیدائش کے بعد، کیا کسی نے (نام) کی صحت کا معائنہ کیا
                                                 تھا؟
                                             </h4>
-                                            <input type="Radio" name="h125"
+                                            <input type="Radio" name="h125" onclick="showQuestions('h125a')"
                                                    value="1" id="h125a" required>
                                             ہاں <br>
-                                            <input type="Radio" name="h125" onclick="skipQuestion('h125b','h125a')"
+                                            <input type="Radio" name="h125" onclick="skipQuestions('h125a')"
                                                    value="2" id="h125b" required>
                                             نہیں <br></div>
                                     </div>
                                     <hr>
-                                    <div class="row urdu">
+                                    <div class="row urdu h125a hide">
                                         <div class="col-md-12">
                                             <h4>
                                                 <small>h125a :</small>
@@ -624,15 +635,15 @@
                                                 <small>h131 :</small>
                                                 کیا آپ(نام) کو حفاظتی ٹیکوں کے لیے لے کر گئی تھیں؟
                                             </h4>
-                                            <input type="Radio" name="h131"
+                                            <input type="Radio" name="h131" onclick="showQuestions('h131a')"
                                                    value="1" id="h131a" required>
                                             ہاں <br>
-                                            <input type="Radio" name="h131" onclick="skipQuestion('h131b','h131a1')"
+                                            <input type="Radio" name="h131" onclick="skipQuestions('h131a')"
                                                    value="2" id="h131b" required>
                                             نہیں <br></div>
                                     </div>
                                     <hr>
-                                    <div class="row urdu">
+                                    <div class="row urdu h131a hide">
                                         <div class="col-md-12">
                                             <h4>
                                                 <small>h131a :</small>
@@ -653,7 +664,7 @@
                                             <input type="Radio" name="h131a"
                                                    value="5" id="h131ae" required>
                                             کرونا کے لاک ڈائون کی وجہ سے سواری نہیں تھی <br>
-                                            <input type="Radio" name="h131"
+                                            <input type="Radio" name="h131a"
                                                    value="6" id="h131abf" required>
                                             حفاظتی سامان (ماسک، دستانے) گھر پر موجود نہیں تھے <br>
                                             <input type="Radio" name="h131a"
@@ -670,42 +681,42 @@
                                                 <small>h132 :</small>
                                                 کیانوزائیدہ کی پیدائش کے بعد ایل ایچ ڈبلیو نے دورہ کیا تھا ؟
                                             </h4>
-                                            <input type="Radio" name="h132"
+                                            <input type="Radio" name="h132" onclick="skipQuestions('h132a')"
                                                    value="1" id="h132a" required>
                                             ہاں <br>
-                                            <input type="Radio" name="h132" onclick="skipQuestion('h132b','h132a')"
+                                            <input type="Radio" name="h132" onclick="showQuestions('h132a')"
                                                    value="2" id="h132b" required>
                                             نہیں <br>
-                                            <input type="Radio" name="h132" onclick="skipQuestion('h132c','h132a')"
-                                                   value="3" id="h132c" required>
+                                            <input type="Radio" name="h132" onclick="showQuestions('h132a')""
+                                            value="3" id="h132c" required>
                                             زچگی کسی اور علاقہ میں ہوئی تھی<br></div>
                                     </div>
                                     <hr>
-                                    <div class="row urdu">
+                                    <div class="row urdu h132a hide">
                                         <div class="col-md-12">
                                             <h4>
                                                 <small>h132a :</small>
                                                 لیڈی ہیلتھ ورکر کا وزٹ نہیں کرنے کا سبب کیا تھا؟
                                             </h4>
                                             <input type="checkbox" name="h132a"
-                                                   value="1" id="h132aa" required>
+                                                   value="1" id="h132aa">
                                             ایل ایچھ ڈبلیو اکثر وزت پرنہیں آتی <br>
                                             <input type="checkbox" name="h132a"
-                                                   value="2" id="h132ab" required>
+                                                   value="2" id="h132ab">
                                             ایل ایچھ ڈبلیوکرونا کی وجہ سےوزٹ نہیں کرسکی <br>
                                             <input type="checkbox" name="h132a"
-                                                   value="3" id="h132ac" required>ایل ایچھ ڈبلیوآئی مگر ہم نے گھر میں
+                                                   value="3" id="h132ac">ایل ایچھ ڈبلیوآئی مگر ہم نے گھر میں
                                             آنے نہیں دیا <br>
                                             <input type="checkbox" name="h132a"
-                                                   value="31" id="h132ad" required> ایل ایچھ ڈبلیونے ماسک نہیں پہنا ہوا
+                                                   value="31" id="h132ad"> ایل ایچھ ڈبلیونے ماسک نہیں پہنا ہوا
                                             تھا
                                             <br>
                                             <input type="checkbox" name="h132a"
-                                                   value="32" id="h132ae" required> کرونا کا ڈریا خوف <br>
+                                                   value="32" id="h132ae"> کرونا کا ڈریا خوف <br>
                                             <input type="checkbox" name="h132a"
-                                                   value="33" id="h132af" required>سماجی مفاصلا <br>
+                                                   value="33" id="h132af">سماجی مفاصلا <br>
                                             <input type="checkbox" name="h132a"
-                                                   value="34" id="h132ag" required>حفاظتی سامان گھر پر موجود نہیں تھا
+                                                   value="34" id="h132ag">حفاظتی سامان گھر پر موجود نہیں تھا
                                             <br>
                                         </div>
                                     </div>
@@ -761,15 +772,15 @@
                                                 بازو
                                                 پر ٹیکے کا داغ رہ جاتا ہے)
                                             </h4>
-                                            <input type="Radio" name="h137"
+                                            <input type="Radio" name="h137" onclick="skipQuestion('h137aa')"
                                                    value="1" id="h137a" required>
                                             ہاں <br>
-                                            <input type="Radio" name="h137" onclick="skipQuestion('137b','h137aa')"
+                                            <input type="Radio" name="h137" onclick="showQuestions('h137aa')"
                                                    value="2" id="h137b" required>
                                             نہیں <br></div>
                                     </div>
                                     <hr>
-                                    <div class="row urdu">
+                                    <div class="row urdu h137aa hide">
                                         <div class="col-md-12">
                                             <h4>
                                                 <small>h137aa :</small>
@@ -790,7 +801,7 @@
                                             <input type="Radio" name="h137aa"
                                                    value="5" id="h137aae" required>
                                             کرونا کے لاک ڈائون کی وجہ سے سواری نہیں تھی <br>
-                                            <input type="Radio" name="h131"
+                                            <input type="Radio" name="h137aa"
                                                    value="6" id="h137aabf" required>
                                             حفاظتی سامان (ماسک، دستانے) گھر پر موجود نہیں تھے <br>
                                             <input type="Radio" name="h137aa"
@@ -809,14 +820,16 @@
                                                 کیا لیڈی ہیلتھ ورکر نےزچگی کے بعد آپ کے پاس دورہ کیا تھا؟
                                             </h4>
                                             <input type="Radio" name="h209"
+                                                   onclick="skipQuestions('h209aa')"
                                                    value="1" id="h209a" required>
-                                            ہاں <br><input type="Radio" name="h209"
-                                                           onclick="skipQuestion('h209b','h209aa')"
-                                                           value="2" id="h209b" required>
+                                            ہاں <br>
+                                            <input type="Radio" name="h209"
+                                                   onclick="showQuestions('h209aa')"
+                                                   value="2" id="h209b" required>
                                             نہیں <br></div>
                                     </div>
                                     <hr>
-                                    <div class="row urdu">
+                                    <div class="row urdu h209aa hide">
                                         <div class="col-md-12">
                                             <h4>
                                                 <small>h209a :</small>
@@ -879,44 +892,44 @@
                                                 کیا آپ کے گھر کے کسی مرد نے ولیج ہیلتھ کمیٹی کی میٹنگ میں حصہ لیا
                                                 ہے؟
                                             </h4>
-                                            <input type="Radio" name="h216"
+                                            <input type="Radio" name="h216" onclick="showQuestions('h216aa')"
                                                    value="1" id="h216a" required>
                                             ہاں <br>
-                                            <input type="Radio" name="h216" onclick="skipQuestion('h2146b','h216aa')"
+                                            <input type="Radio" name="h216" onclick="skipQuestions('h216aa')"
                                                    value="2" id="h216b" required>
                                             نہیں <br>
-                                            <input type="Radio" name="h216"
+                                            <input type="Radio" name="h216" onclick="showQuestions('h216aa')"
                                                    value="3" id="h216c" required>
                                             کبھی سنا نہیں اس کے بارے میں <br></div>
                                     </div>
                                     <hr>
 
-                                    <div class="row urdu">
+                                    <div class="row urdu h216aa hide">
                                         <div class="col-md-12">
                                             <h4>
                                                 <small>h216aa :</small>
                                                 کیا آپ(نام) کو حفاظتی ٹیکےکیوں نہیں لگوائے؟
                                             </h4>
-                                            <input type="Radio" name="h216aa"
-                                                   value="1" id="h216aaa" required>
+                                            <input type="checkbox" name="h216aa"
+                                                   value="1" id="h216aaa">
                                             اتنا اہم نہیں تھا <br>
-                                            <input type="Radio" name="h216aa"
-                                                   value="2" id="h216aab" required>
+                                            <input type="checkbox" name="h216aa"
+                                                   value="2" id="h216aab">
                                             ہسپتال کرونا کی وجہ سے بند تھ <br>
-                                            <input type="Radio" name="h216aa"
-                                                   value="3" id="h216aac" required>
+                                            <input type="checkbox" name="h216aa"
+                                                   value="3" id="h216aac">
                                             کرونا کا ڈریا خوف <br>
-                                            <input type="Radio" name="h216aa"
-                                                   value="4" id="h216aad" required>
+                                            <input type="checkbox" name="h216aa"
+                                                   value="4" id="h216aad">
                                             سماجی مفاصلہ <br>
-                                            <input type="Radio" name="h216aa"
-                                                   value="5" id="h216aae" required>
+                                            <input type="checkbox" name="h216aa"
+                                                   value="5" id="h216aae">
                                             کرونا کے لاک ڈائون کی وجہ سے سواری نہیں تھی <br>
-                                            <input type="Radio" name="h131"
-                                                   value="6" id="h216aabf" required>
+                                            <input type="checkbox" name="h131"
+                                                   value="6" id="h216aabf">
                                             حفاظتی سامان (ماسک، دستانے) گھر پر موجود نہیں تھے <br>
-                                            <input type="Radio" name="h216aa"
-                                                   value="7" id="h216aag" required>
+                                            <input type="checkbox" name="h216aa"
+                                                   value="7" id="h216aag">
                                             ڈاکٹر احتیاطی تدابیر پر عمل نہیں کر رہا تھا (ماسک اور دستانے نہیں پہنےہوئے
                                             تھے) <br>
 
@@ -942,10 +955,10 @@
                                                 پتلے
                                                 پاخانے)
                                             </h4>
-                                            <input type="Radio" name="i101"
+                                            <input type="Radio" name="i101" onclick="skipQuestions('i207')"
                                                    value="1" id="i101a" required>
                                             ہاں <br>
-                                            <input type="Radio" name="i101" onclick="skipQuestion('i101b','i207')"
+                                            <input type="Radio" name="i101" onclick="showQuestions('i207')"
                                                    value="2" id="i101b" required>
                                             نہیں <br></div>
                                     </div>
@@ -957,46 +970,46 @@
                                                 <small>i105 :</small>
                                                 (نام) کو دستوں کی تکلیف ہونے پر کیا آپ نے علاج کروایا تھا؟
                                             </h4>
-                                            <input type="Radio" name="i105" onclick="skipQuestion('i105a','i125')"
+                                            <input type="Radio" name="i105" onclick="showQuestions('i125')"
                                                    value="1" id="i105a" required>
                                             ہاں <br><input type="Radio" name="i105"
-                                                           onclick="skipQuestion('i105b','i106')"
+                                                           onclick="showQuestions('i106')"
                                                            value="2" id="i105b" required>
                                             نہیں <br></div>
                                     </div>
                                     <hr>
-                                    <div class="row urdu">
+                                    <div class="row urdu i106 hide">
                                         <div class="col-md-12">
                                             <h4>
                                                 <small>i106 :</small>
                                                 (نام) کو دستوں کی تکلیف ہونے پر آپ نے کیوں علاج نہیں کروایا ؟
                                             </h4>
                                             <input type="Radio" name="i106"
-                                                   value="1" id="i106a" required>
+                                                   value="1" id="i106a">
                                             اس مسئلے کے لیے علاج کروانے کی ضرورت نہیں تھی <br>
                                             <input type="Radio"
                                                    name="i106"
                                                    value="2"
                                                    id="i106b"
-                                                   required>
+                                            >
                                             صحت فراہم کرنے والے کو دینے کے لیے پیسے نہیں تھے<br>
                                             <input type="Radio"
                                                    name="i106"
                                                    value="3"
                                                    id="i106c"
-                                                   required>
+                                            >
                                             ٹرانسپورٹ دستیاب نہیں تھی<br>
                                             <input type="Radio" name="i106"
-                                                   value="4" id="i106d" required>
+                                                   value="4" id="i106d">
                                             کوئی مرد گھر پر موجود نہیں تھا جو مرکزِ صحت تک لے جاتا<br>
                                             <input
                                                     type="Radio" name="i106"
-                                                    value="5" id="i106e" required>
+                                                    value="5" id="i106e">
                                             گھر کے سربراہ/شوہر/ساس نے اجازت نہیں دی<br>
                                             <input type="Radio"
                                                    name="i106"
                                                    value="6" id="i106f"
-                                                   required>
+                                            >
                                             مرکزِصحت بہت دور تھا<br>
                                             <br>
                                             <input type="Radio" name="i106" value="7" id="i106j">
@@ -1024,12 +1037,179 @@
                                                 وزٹ
                                                 کیا تھا ؟
                                             </h4>
-                                            <input type="Radio" name="i125"
+                                            <input type="Radio" name="i125" onclick="skipQuestions('i125aa')"
                                                    value="1" id="i125a" required>
                                             ہاں <br>
-                                            <input type="Radio" name="i125" onclick="skipQuestion('i125b','i125aa')"
+                                            <input type="Radio" name="i125" onclick="showQuestions('i125aa')"
                                                    value="2" id="i125b" required>
                                             نہیں <br></div>
+                                    </div>
+                                    <hr>
+                                    <div class="row urdu i125aa hide">
+                                        <div class="col-md-12">
+                                            <h4>
+                                                <small>i125a :</small>
+                                                لیڈی ہیلتھ ورکر کا وزٹ نہیں کرنے کا سبب کیا تھا؟
+                                            </h4>
+                                            <input type="checkbox" name="i125aa"
+                                                   value="1" id="i125aaa">
+                                            ایل ایچھ ڈبلیو اکثر وزت پرنہیں آتی <br>
+                                            <input type="checkbox" name="i125aa"
+                                                   value="2" id="i125aab">
+                                            ایل ایچھ ڈبلیوکرونا کی وجہ سےوزٹ نہیں کرسکی <br>
+                                            <input type="checkbox" name="i125aa"
+                                                   value="3" id="i125aac">ایل ایچھ ڈبلیوآئی مگر ہم نے گھر میں
+                                            آنے نہیں دیا <br>
+                                            <input type="checkbox" name="i125aa"
+                                                   value="31" id="i125aad"> ایل ایچھ ڈبلیونے ماسک نہیں پہنا ہوا
+                                            تھا
+                                            <br>
+                                            <input type="checkbox" name="i125aa"
+                                                   value="32" id="i125aae"> کرونا کا ڈریا خوف <br>
+                                            <input type="checkbox" name="i125aa"
+                                                   value="33" id="i125aaf">سماجی مفاصلا <br>
+                                            <input type="checkbox" name="i125aa"
+                                                   value="34" id="i125aag">حفاظتی سامان گھر پر موجود نہیں تھا
+                                            <br>
+                                        </div>
+                                    </div>
+                                    <hr>
+
+                                    <p class="myheading">
+                                        ARI نظام تنفس کا شدید انفیکشن
+                                    </p>
+                                    <div class="row urdu">
+                                        <div class="col-md-12">
+                                            <h4>
+                                                <small>i203 :</small>
+                                                کیا کسی بچے کو پچھلے دو ہفتوں میں بخار کے ساتھ کھانسی کا مسئلہ درپیش
+                                                آیا۔ جیسے کہ سانس کا تیز چلنا/ یا سانس لینے میں دشواری؟
+                                            </h4>
+                                            <input type="Radio" name="i203" onclick="skipQuestions('j108')"
+                                                   value="1" id="i203a" required>
+                                            ہاں<br>
+                                            <input type="Radio" name="i203" onclick="showQuestions('j108')"
+                                                   value="2" id="i203b" required>
+                                            نہیں<br>
+                                        </div>
+                                    </div>
+                                    <hr>
+                                    <div class="row urdu">
+                                        <div class="col-md-12">
+                                            <h4>
+                                                <small>i207 :</small>
+                                                کیاآپ نے (نام) کا کھانسی، بخار اور سانس میں دشواری کے لیے علاج کروایا
+                                                تھا؟
+                                            </h4>
+                                            <input type="Radio" name="i207" onclick="showQuestions('i225')"
+                                                   value="1" id="i207a" required>
+                                            ہاں<br>
+                                            <input type="Radio" name="i207" onclick="showQuestions('i208')"
+                                                   value="2" id="i207b" required>
+                                            نہیں<br>
+                                        </div>
+                                    </div>
+                                    <hr>
+                                    <div class="row urdu i208 hide">
+                                        <div class="col-md-12">
+                                            <h4>
+                                                <small>i208 :</small>
+                                                آپ نے (نام) کی بیماری کا علاج کیوں نہیں کروایا تھا؟
+                                            </h4>
+                                            <input type="CheckBox" name="i208"
+                                                   value="1" id="i208a">
+                                            مسئلہ اتنا بڑا نہیں تھا کہ علاج کرواتے
+                                            <br>
+                                            <input type="CheckBox" name="i208"
+                                                   value="2" id="i208b">
+                                            صحت کی سہولت فراہم کرنے والے کو دینے کے لیے پیسے نہیں تھے
+                                            <br>
+                                            <input type="CheckBox" name="i208"
+                                                   value="3" id="i208c">
+                                            ٹرانسپورٹ کی عدم دستیابی
+                                            <br>
+                                            <input type="CheckBox" name="i208"
+                                                   value="4" id="i208d">
+                                            کوئی مرد موجود نہیں تھا جو مرکزِ صحت لے کر جاسکے
+                                            <br>
+                                            <input type="CheckBox" name="i208"
+                                                   value="5" id="i208e">
+                                            گھر کے سربراہ/ شوہر/ساس نے اجازت نہیں دی
+                                            <br>
+                                            <input type="CheckBox" name="i208"
+                                                   value="6" id="i208f">
+                                            مرکز صحت کافی دور تھا
+                                            <br>
+                                            <input type="CheckBox" name="i208"
+                                                   value="7" id="i208g">
+                                            صحت کا مرکز بند تھا
+                                            <br>
+                                            <input type="CheckBox" name="i208"
+                                                   value="8" id="i208h">
+                                            سروسز یا خدمات کا معیار اچھا نہیں تھا
+                                            <br>
+                                            <input type="CheckBox" name="i208"
+                                                   value="9" id="i208i">
+                                            ہسپتال کرونا کی وجہ سے بند تھا
+                                            <br>
+                                            <input type="CheckBox" name="i208" value="10" id="i208j">
+                                            کرونا کا ڈریا خوف<br>
+                                            <input type="CheckBox" name="i208" value="11" id="i208k">
+                                            سماجی مفاصلہ <br>
+                                            <input type="CheckBox" name="i208" value="12" id="i208l">
+                                            کرونا کے لاک ڈائون کی وجہ سے سواری نہیں تھی br>
+                                            <input type="CheckBox" name="i208" value="13" id="i208m">
+                                            حفاظتی سامان (ماسک، دستانے) گھر پر موجود نہیں تھے <br>
+                                            <input type="CheckBox" name="i208" value="14" id="i208n">
+                                            ڈاکٹر احتیاطی تدابیر پر عمل نہیں کر رہا تھا (ماسک اور دستانے نہیں پہنےہوئے
+                                            تھے<br>
+                                        </div>
+                                    </div>
+                                    <hr>
+                                    <div class="row urdu i225 hide">
+                                        <div class="col-md-12">
+                                            <h4>
+                                                <small>i225 :</small>
+                                                کیا جب (نام) نمونیا کی بیماری میں مبتلا تھا اس وقت لیڈی ہیلتھ ورکر نے آپ
+                                                کے گھر کا دورہ کیا
+                                            </h4>
+                                            <input type="Radio" name="i225" onclick="skipQuestions('i225a')"
+                                                   value="1" id="i225a" required>
+                                            ہاں<br>
+                                            <input type="Radio" name="i225" onclick="showQuestions('i225a')"
+                                                   value="2" id="i225b" required>
+                                            نہیں<br>
+                                        </div>
+                                    </div>
+                                    <hr>
+
+                                    <div class="row urdu">
+                                        <div class="col-md-12">
+                                            <h4>
+                                                <small>i225a :</small>
+                                                لیڈی ہیلتھ ورکر کا وزٹ نہیں کرنے کا سبب کیا تھا؟
+                                            </h4>
+                                            <input type="checkbox" name="i225a"
+                                                   value="1" id="i225aa" required>
+                                            ایل ایچھ ڈبلیو اکثر وذٹ پر نہیں آتی <br>
+                                            <input type="checkbox" name="i225a"
+                                                   value="2" id="i225ab" required>
+                                            ایل ایچھ ڈبلیوکرونا کی وجہ سےوزٹ نہیں کرسکی <br>
+                                            <input type="checkbox" name="i225a"
+                                                   value="3" id="i225ac" required>ایل ایچھ ڈبلیوآئی مگر ہم نے گھر میں
+                                            آنے نہیں دیا <br>
+                                            <input type="checkbox" name="i225a"
+                                                   value="31" id="i225ad" required> ایل ایچھ ڈبلیونے ماسک نہیں پہنا ہوا
+                                            تھا
+                                            <br>
+                                            <input type="checkbox" name="i225a"
+                                                   value="32" id="i225ae" required> کرونا کا ڈریا خوف <br>
+                                            <input type="checkbox" name="i225a"
+                                                   value="33" id="i225af" required>سماجی مفاصلا <br>
+                                            <input type="checkbox" name="i225a"
+                                                   value="34" id="i225ag" required>حفاظتی سامان گھر پر موجود نہیں تھا
+                                            <br>
+                                        </div>
                                     </div>
                                     <hr>
 
@@ -1054,19 +1234,19 @@
                                                 ویکسین
                                                 شامل ہیں۔
                                             </h4>
-                                            <input type="Radio" name="j108"
+                                            <input type="Radio" name="j108" onclick="skipQuestions('j123')"
                                                    value="1" id="j108a" required>
                                             ہاں<br>
-                                            <input type="Radio" name="j108" onclick="skipQuestion('j108b','j123')"
+                                            <input type="Radio" name="j108" onclick="showQuestions('j123')"
                                                    value="2" id="j108b" required>
                                             نہیں<br>
-                                            <input type="Radio" name="j108"
+                                            <input type="Radio" name="j108" onclick="skipQuestions('j123')"
                                                    value="98" id="j108c" required>
                                             معلوم نہیں<br></div>
                                     </div>
                                     <hr>
 
-                                    <div class="row urdu">
+                                    <div class="row urdu j123 hide">
                                         <div class="col-md-12">
                                             <h4>
                                                 <small>j123 :</small>
@@ -1112,7 +1292,8 @@
                                             حفاظتی ٹیکے لگوانے پر یقین نہیں ہے<br>
                                             <input type="CheckBox" name="j123"
                                                    value="10" id="j123j">
-                                            ضمنی اثرات کا خوف<br><input type="CheckBox" name="j123"
+                                            ضمنی اثرات کا خوف<br>
+                                            <input type="CheckBox" name="j123"
                                                                         value="11" id="j123k">
                                             حفاظتی ٹیکے لگوانے کی جگہ اور وقت معلوم نہیں تھا<br>
                                             <input
@@ -1184,39 +1365,39 @@
                                                 حمل
                                                 طریقوں کے بارے میں بتایا تھا؟
                                             </h4>
-                                            <input type="Radio" name="k107"
+                                            <input type="Radio" name="k107" onclick="skipQuestions('k107aa')"
                                                    value="1" id="k107a" required>
                                             ہاں<br>
-                                            <input type="Radio" name="k107" onclick="skipQuestion('k107b','k107aa')"
+                                            <input type="Radio" name="k107" onclick="showQuestions('k107aa')"
                                                    value="2" id="k107b" required>
                                             نہیں<br></div>
                                     </div>
                                     <hr>
-                                    <div class="row urdu">
+                                    <div class="row urdu k107aa hide">
                                         <div class="col-md-12">
                                             <h4>
                                                 <small>k107aa :</small>
                                                 لیڈی ہیلتھ ورکر کا وزٹ نہیں کرنے کا سبب کیا تھا؟
                                             </h4>
                                             <input type="checkbox" name="k107aa"
-                                                   value="1" id="k107aaa" required>
+                                                   value="1" id="k107aaa">
                                             ایل ایچھ ڈبلیو اکثر وزت پرنہیں آتی <br>
                                             <input type="checkbox" name="k107aa"
-                                                   value="2" id="k107aab" required>
+                                                   value="2" id="k107aab">
                                             ایل ایچھ ڈبلیوکرونا کی وجہ سےوزٹ نہیں کرسکی <br>
                                             <input type="checkbox" name="k107aa"
-                                                   value="3" id="k107aac" required>ایل ایچھ ڈبلیوآئی مگر ہم نے گھر میں
+                                                   value="3" id="k107aac">ایل ایچھ ڈبلیوآئی مگر ہم نے گھر میں
                                             آنے نہیں دیا <br>
                                             <input type="checkbox" name="k107aa"
-                                                   value="31" id="k107aad" required> ایل ایچھ ڈبلیونے ماسک نہیں پہنا ہوا
+                                                   value="31" id="k107aad"> ایل ایچھ ڈبلیونے ماسک نہیں پہنا ہوا
                                             تھا
                                             <br>
                                             <input type="checkbox" name="k107aa"
-                                                   value="32" id="k107aae" required> کرونا کا ڈریا خوف <br>
+                                                   value="32" id="k107aae"> کرونا کا ڈریا خوف <br>
                                             <input type="checkbox" name="k107aa"
-                                                   value="33" id="k107aaf" required>سماجی مفاصلا <br>
+                                                   value="33" id="k107aaf">سماجی مفاصلا <br>
                                             <input type="checkbox" name="k107aa"
-                                                   value="34" id="k107aag" required>حفاظتی سامان گھر پر موجود نہیں تھا
+                                                   value="34" id="k107aag">حفاظتی سامان گھر پر موجود نہیں تھا
                                             <br>
                                         </div>
                                     </div>
@@ -1280,7 +1461,7 @@
                                     </div>
                                 </div>
                                 <div class="box-footer">
-                                    <?php echo form_submit('submit', "Register User", 'class="btn btn-primary"'); ?>
+                                    <?php echo form_submit('submit', "Upload Form", 'class="btn btn-primary"'); ?>
                                 </div>
                                 <?php echo form_close(); ?>
                             </div>
