@@ -9,7 +9,7 @@
 
     .urdu {
         font-family: 'Noto Naskh Arabic', serif;
-        font-size: 16px;
+        font-size: 18px;
         direction: rtl;
 
         /*font-family: "Jameel Noori Nastaleeq"; */
@@ -94,12 +94,13 @@
                                                     کلسٹر نمبر
                                                 </h4>
                                                 <input type="text" id="cluster_no" class="inp" maxlength="6"
+                                                       value="211243"
                                                        name="cluster_no" required>
                                             </div>
 
                                         </div>
                                     </div>
-                                    <hr>
+                                    <hr class="hr">
 
                                     <div class="row">
                                         <div class="col-md-12">
@@ -108,7 +109,8 @@
                                                     <small>hhno :</small>
                                                     گھریلو نمبر
                                                 </h4>
-                                                <input type="text" id="hhno" class="inp" name="hhno" required>
+                                                <input type="text" id="hhno" class="inp" name="hhno" value="A-0003-001"
+                                                       required>
                                                 <button type="button" class="checkBtn" onclick="checkCluster()">Check
                                                     Cluster
                                                 </button>
@@ -116,7 +118,7 @@
 
                                         </div>
                                     </div>
-                                    <hr>
+                                    <hr class="hr">
 
                                     <div class="hide mainform">
                                         <!--<div class="row">
@@ -131,7 +133,7 @@
 
                                             </div>
                                         </div>
-                                        <hr>-->
+                                        <hr class="hr">-->
                                         <div class="row">
                                             <div class="col-md-12">
                                                 <div class="form-group">
@@ -144,7 +146,7 @@
 
                                             </div>
                                         </div>
-                                        <hr>
+                                        <hr class="hr">
 
 
                                         <div class="row">
@@ -159,7 +161,7 @@
 
                                             </div>
                                         </div>
-                                        <hr>
+                                        <hr class="hr">
                                         <div class="row">
                                             <div class="col-md-12">
                                                 <div class="form-group">
@@ -172,7 +174,7 @@
 
                                             </div>
                                         </div>
-                                        <hr>
+                                        <hr class="hr">
                                         <!--  <div class="row urdu">
                                               <div class="col-md-12">
                                                   <h4>
@@ -186,7 +188,7 @@
                                                          value="2" id="a102b" required>
                                                   ایل ایچ ڈبلیو دورہ نہیں کرتی <br></div>
                                           </div>
-                                          <hr>
+                                          <hr class="hr">
                                           <div class="row urdu">
                                               <div class="col-md-12">
                                                   <h4>
@@ -204,7 +206,7 @@
                                                   سندھ <br>
                                               </div>
                                           </div>
-                                          <hr>
+                                          <hr class="hr">
 
                                           <div class="row urdu">
                                               <div class="col-md-12">
@@ -223,7 +225,7 @@
                                                   لسبیلہ <br>
                                               </div>
                                           </div>
-                                          <hr>
+                                          <hr class="hr">
                                           <div class="row">
                                               <div class="col-md-12">
                                                   <div class="form-group">
@@ -233,7 +235,7 @@
 
                                               </div>
                                           </div>
-                                          <hr>
+                                          <hr class="hr">
                                           <div class="row">
                                               <div class="col-md-12">
                                                   <div class="form-group">
@@ -242,7 +244,7 @@
                                                   </div>
                                               </div>
                                           </div>
-                                          <hr>
+                                          <hr class="hr">
                                           <div class="row urdu">
                                               <div class="col-md-12">
                                                   <h4>
@@ -257,7 +259,7 @@
                                                   دیہی <br>
                                               </div>
                                           </div>
-                                          <hr>
+                                          <hr class="hr">
                                           <div class="row urdu">
                                               <div class="col-md-12">
                                                   <h4>
@@ -275,7 +277,7 @@
                                                   دستیاب نہیں <br>
                                               </div>
                                           </div>
-                                          <hr>
+                                          <hr class="hr">
                                           <div class="row">
                                               <div class="col-md-12">
                                                   <div class="form-group">
@@ -287,7 +289,7 @@
                                                   </div>
                                               </div>
                                           </div>
-                                          <hr>
+                                          <hr class="hr">
                                           <div class="row">
                                               <div class="col-md-12">
                                                   <div class="form-group">
@@ -299,7 +301,7 @@
                                                   </div>
                                               </div>
                                           </div>
-                                          <hr>
+                                          <hr class="hr">
                                           <div class="row">
                                               <div class="col-md-12">
                                                   <div class="form-group">
@@ -311,7 +313,7 @@
                                                   </div>
                                               </div>
                                           </div>
-                                          <hr>
+                                          <hr class="hr">
                                         <p>اسلام وعلیکم،</p>
                                         <p> میرا نام(انٹرویو کرنے والے کا نام)۔۔۔۔۔۔۔۔۔۔۔۔۔ ہے اور میں سینٹر آف ایکسلنس
                                             وومن اینڈ چائلڈ ہیلتھ آغا خان یونیورسٹی کراچی کے ساتھ کام کرتی ہوں جو کہ وفاقی
@@ -366,7 +368,7 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <hr>
+                                        <hr class="hr">
 
     -->
                                         <p class="myheading"> سیکشن ایف : حمل کی
@@ -393,7 +395,7 @@
                                                 نہیں<br>
                                             </div>
                                         </div>
-                                        <hr>
+                                        <hr class="hr">
                                         <div class="row urdu f101a hide">
                                             <div class="col-md-12">
                                                 <h4>
@@ -436,7 +438,7 @@
 
                                             </div>
                                         </div>
-                                        <hr>
+                                        <hr class="hr hide">
                                         <div class="row urdu">
                                             <div class="col-md-12">
                                                 <h4>
@@ -450,7 +452,7 @@
                                                 نہیں <br>
                                             </div>
                                         </div>
-                                        <hr>
+                                        <hr class="hr">
                                         <div class="row urdu">
                                             <div class="col-md-12">
                                                 <h4>
@@ -467,7 +469,7 @@
                                                 نہیں <br>
                                             </div>
                                         </div>
-                                        <hr>
+                                        <hr class="hr">
                                         <div class="row urdu hide f121b">
                                             <div class="col-md-12">
                                                 <h4>
@@ -478,28 +480,36 @@
                                                 ایل ایچھ ڈبلیو اکثر وزت پرنہیں آتی <br>
                                                 <input type="checkbox" name="f121bb" value="2" id="f121bb">
                                                 ایل ایچھ ڈبلیوکرونا کی وجہ سےوزٹ نہیں کرسکی <br>
-                                                <input type="checkbox" name="f121bc" value="3" id="f121bc">ایل ایچھ
+                                                <input type="checkbox" name="f121bc" value="3" id="f121bc"
+                                                       onclick="select3options(this, 'f121bc')">ایل
+                                                ایچھ
                                                 ڈبلیوآئی
                                                 مگر ہم نے گھر میں
                                                 آنے نہیں دیا <br>
-                                                <input type="checkbox" name="f121bd" value="31" id="f121bd"> ایل ایچھ
-                                                ڈبلیونے
-                                                ماسک نہیں پہنا ہوا
-                                                تھا
-                                                <br>
-                                                <input type="checkbox" name="f121be" value="32" id="f121be"> کرونا کا
-                                                ڈریا
-                                                خوف <br>
-                                                <input type="checkbox" name="f121bf" value="33" id="f121b">سماجی مفاصلا
-                                                <br>
-                                                <input type="checkbox" name="f121bg" value="34" id="f121bf">حفاظتی سامان
-                                                گھر
-                                                پر موجود نہیں تھا
-                                                <br>
+                                                <div class="childHide hide">
+                                                    <input type="checkbox" name="f121bd" value="31" id="f121bd"> ایل
+                                                    ایچھ
+                                                    ڈبلیونے
+                                                    ماسک نہیں پہنا ہوا
+                                                    تھا
+                                                    <br>
+                                                    <input type="checkbox" name="f121be" value="32" id="f121be"> کرونا
+                                                    کا
+                                                    ڈریا
+                                                    خوف <br>
+                                                    <input type="checkbox" name="f121bf" value="33" id="f121b">سماجی
+                                                    مفاصلا
+                                                    <br>
+                                                    <input type="checkbox" name="f121bg" value="34" id="f121bf">حفاظتی
+                                                    سامان
+                                                    گھر
+                                                    پر موجود نہیں تھا
+                                                    <br>
+                                                </div>
 
                                             </div>
                                         </div>
-                                        <hr>
+                                        <hr class="hr hide">
 
                                         <div class="row urdu">
                                             <div class="col-md-12">
@@ -516,7 +526,7 @@
                                                 نہیں <br>
                                             </div>
                                         </div>
-                                        <hr>
+                                        <hr class="hr">
                                         <div class="row urdu f130 hide">
                                             <div class="col-md-12">
                                                 <h4>
@@ -568,7 +578,7 @@
                                                 تھے<br>
                                             </div>
                                         </div>
-                                        <hr>
+                                        <hr class="hr hide">
 
                                         <div class="row urdu">
                                             <div class="col-md-12">
@@ -607,7 +617,7 @@
                                                 کرونا کی وجہ سےکوئی تیاری نہیں کی<br>
                                             </div>
                                         </div>
-                                        <hr>
+                                        <hr class="hr">
 
 
                                         <p class="myheading"> سیکشن جی: زچگی کی
@@ -650,7 +660,7 @@
                                                 <br>
                                             </div>
                                         </div>
-                                        <hr>
+                                        <hr class="hr">
                                         <div class="row urdu">
                                             <div class="col-md-12">
                                                 <h4>
@@ -661,24 +671,47 @@
                                                     Date of delivery
 
                                                 </h4>
-                                                <input type="input" name="e106a" maxlength="2" min="0" max="31"
+                                                <label for="e106a">دن </label>
+                                                <select id="e106a" name="e106a" style="width: 15%; margin-bottom: 10px"
+                                                        required>
+                                                    <option value="0">دن</option>
+                                                    <?php for ($d = 1; $d <= 31; $d++) {
+                                                        echo '<option value="' . $d . '">' . $d . '</option>';
+                                                    } ?>
+                                                </select>
+                                                <!--<input type="input" name="e106a" maxlength="2" min="0" max="31"
                                                        id="e106a"
-                                                       required>
-                                                دن
+                                                       required>-->
                                                 <br>
-                                                <input type="input" max="12" name="e106b" maxlength="2" min="0"
+                                                <label for="e106b">مہینہ </label>
+                                                <select id="e106b" name="e106b" required
+                                                        style="width: 15%; margin-bottom: 10px">
+                                                    <option value="0">مہینہ</option>
+                                                    <?php for ($m = 1; $m <= 12; $m++) {
+                                                        echo '<option value="' . $m . '">' . $m . '</option>';
+                                                    } ?>
+                                                </select>
+                                                <!--<input type="input" max="12" name="e106b" maxlength="2" min="0"
                                                        id="e106b"
                                                        required>
-                                                مہینہ
+                                                مہینہ-->
                                                 <br>
-                                                <input type="input" name="e106c" maxlength="4" id="e106c" min="0"
+                                                <label for="e106c">سال </label>
+                                                <select id="e106c" name="e106c" required
+                                                        style="width: 15%; margin-bottom: 10px">
+                                                    <option value="0">سال</option>
+                                                    <?php for ($y = 2010; $y <= 2020; $y++) {
+                                                        echo '<option value="' . $y . '">' . $y . '</option>';
+                                                    } ?>
+                                                </select>
+                                                <!--<input type="input" name="e106c" maxlength="4" id="e106c" min="0"
                                                        required>
-                                                سال
+                                                سال-->
                                                 <br>
 
                                             </div>
                                         </div>
-                                        <hr>
+                                        <hr class="hr">
                                         <div class="row urdu g103 hide">
                                             <div class="col-md-12">
                                                 <h4>
@@ -741,7 +774,7 @@
                                                 تھے<br>
                                             </div>
                                         </div>
-                                        <hr>
+                                        <hr class="hr hide">
 
                                         <div class="row urdu">
                                             <div class="col-md-12">
@@ -763,7 +796,7 @@
                                                 <br>
                                             </div>
                                         </div>
-                                        <hr>
+                                        <hr class="hr">
                                         <div class="row urdu g125a hide">
                                             <div class="col-md-12">
                                                 <h4>
@@ -776,23 +809,27 @@
                                                 <input type="checkbox" name="g125ab"
                                                        value="2" id="g125ab">
                                                 ایل ایچھ ڈبلیوکرونا کی وجہ سےوزٹ نہیں کرسکی <br>
-                                                <input type="checkbox" name="g125av"
+                                                <input type="checkbox" name="g125ac"
+                                                       onclick="select3options(this,'g125ac')"
                                                        value="3" id="g125ac">ایل ایچھ ڈبلیوآئی مگر ہم نے گھر میں
                                                 آنے نہیں دیا <br>
-                                                <input type="checkbox" name="g125ad"
-                                                       value="31" id="g125ad"> ایل ایچھ ڈبلیونے ماسک نہیں پہنا ہوا
-                                                تھا
-                                                <br>
-                                                <input type="checkbox" name="g125ae"
-                                                       value="32" id="g125ae"> کرونا کا ڈریا خوف <br>
-                                                <input type="checkbox" name="g125af"
-                                                       value="33" id="g125af">سماجی مفاصلا <br>
-                                                <input type="checkbox" name="g125ag"
-                                                       value="34" id="g125ag">حفاظتی سامان گھر پر موجود نہیں تھا
-                                                <br>
+                                                <div class="childHide hide">
+                                                    <input type="checkbox" name="g125ad"
+                                                           value="31" id="g125ad"> ایل ایچھ ڈبلیونے ماسک نہیں پہنا ہوا
+                                                    تھا
+                                                    <br>
+                                                    <input type="checkbox" name="g125ae"
+                                                           value="32" id="g125ae"> کرونا کا ڈریا خوف <br>
+                                                    <input type="checkbox" name="g125af"
+                                                           value="33" id="g125af">سماجی مفاصلا <br>
+                                                    <input type="checkbox" name="g125ag"
+                                                           value="34" id="g125ag">حفاظتی سامان گھر پر موجود نہیں تھا
+                                                    <br>
+                                                </div>
+
                                             </div>
                                         </div>
-                                        <hr>
+                                        <hr class="hr hide">
 
                                         <p class="myheading">
                                             سیکشن ایچ :
@@ -820,7 +857,7 @@
                                                        value="2" id="h125b" required>
                                                 نہیں <br></div>
                                         </div>
-                                        <hr>
+                                        <hr class="hr">
                                         <div class="row urdu h125a hide">
                                             <div class="col-md-12">
                                                 <h4>
@@ -883,7 +920,7 @@
                                                 تھے<br>
                                             </div>
                                         </div>
-                                        <hr>
+                                        <hr class="hr hide">
                                         <div class="row urdu">
                                             <div class="col-md-12">
                                                 <h4>
@@ -897,40 +934,40 @@
                                                        value="2" id="h131b" required>
                                                 نہیں <br></div>
                                         </div>
-                                        <hr>
+                                        <hr class="hr">
                                         <div class="row urdu h131a hide">
                                             <div class="col-md-12">
                                                 <h4>
                                                     <small>h131a :</small>
                                                     کیا آپ(نام) کو حفاظتی ٹیکوں کے لیے لے کر گئی تھیں؟
                                                 </h4>
-                                                <input type="Radio" name="h131a"
+                                                <input type="checkbox" name="h131aa"
                                                        value="1" id="h131aa">
                                                 اتنا اہم نہیں تھا <br>
-                                                <input type="Radio" name="h131a"
+                                                <input type="checkbox" name="h131ab"
                                                        value="2" id="h131ab">
                                                 ہسپتال کرونا کی وجہ سے بند تھ <br>
-                                                <input type="Radio" name="h131a"
+                                                <input type="checkbox" name="h131ac"
                                                        value="3" id="h131ac">
                                                 کرونا کا ڈریا خوف <br>
-                                                <input type="Radio" name="h131a"
+                                                <input type="checkbox" name="h131ad"
                                                        value="4" id="h131ad">
                                                 سماجی مفاصلہ <br>
-                                                <input type="Radio" name="h131a"
+                                                <input type="checkbox" name="h131ae"
                                                        value="5" id="h131ae">
                                                 کرونا کے لاک ڈائون کی وجہ سے سواری نہیں تھی <br>
-                                                <input type="Radio" name="h131a"
-                                                       value="6" id="h131abf">
+                                                <input type="checkbox" name="h131af"
+                                                       value="6" id="h131af">
                                                 حفاظتی سامان (ماسک، دستانے) گھر پر موجود نہیں تھے <br>
-                                                <input type="Radio" name="h131a"
-                                                       value="7" id="h131abg">
+                                                <input type="checkbox" name="h131ag"
+                                                       value="7" id="h131ag">
                                                 ڈاکٹر احتیاطی تدابیر پر عمل نہیں کر رہا تھا (ماسک اور دستانے نہیں
                                                 پہنےہوئے
                                                 تھے) <br>
 
                                             </div>
                                         </div>
-                                        <hr>
+                                        <hr class="hr hide">
                                         <div class="row urdu">
                                             <div class="col-md-12">
                                                 <h4>
@@ -947,7 +984,7 @@
                                                        value="3" id="h132c" required>
                                                 زچگی کسی اور علاقہ میں ہوئی تھی<br></div>
                                         </div>
-                                        <hr>
+                                        <hr class="hr">
                                         <div class="row urdu h132a hide">
                                             <div class="col-md-12">
                                                 <h4>
@@ -961,22 +998,26 @@
                                                        value="2" id="h132ab">
                                                 ایل ایچھ ڈبلیوکرونا کی وجہ سےوزٹ نہیں کرسکی <br>
                                                 <input type="checkbox" name="h132ac"
+                                                       onclick="select3options(this, 'h132ac')"
                                                        value="3" id="h132ac">ایل ایچھ ڈبلیوآئی مگر ہم نے گھر میں
                                                 آنے نہیں دیا <br>
-                                                <input type="checkbox" name="h132ad"
-                                                       value="31" id="h132ad"> ایل ایچھ ڈبلیونے ماسک نہیں پہنا ہوا
-                                                تھا
-                                                <br>
-                                                <input type="checkbox" name="h132ae"
-                                                       value="32" id="h132ae"> کرونا کا ڈریا خوف <br>
-                                                <input type="checkbox" name="h132af"
-                                                       value="33" id="h132af">سماجی مفاصلا <br>
-                                                <input type="checkbox" name="h132ag"
-                                                       value="34" id="h132ag">حفاظتی سامان گھر پر موجود نہیں تھا
-                                                <br>
+                                                <div class="childHide hide">
+                                                    <input type="checkbox" name="h132ad"
+                                                           value="31" id="h132ad"> ایل ایچھ ڈبلیونے ماسک نہیں پہنا ہوا
+                                                    تھا
+                                                    <br>
+                                                    <input type="checkbox" name="h132ae"
+                                                           value="32" id="h132ae"> کرونا کا ڈریا خوف <br>
+                                                    <input type="checkbox" name="h132af"
+                                                           value="33" id="h132af">سماجی مفاصلا <br>
+                                                    <input type="checkbox" name="h132ag"
+                                                           value="34" id="h132ag">حفاظتی سامان گھر پر موجود نہیں تھا
+                                                    <br>
+                                                </div>
+
                                             </div>
                                         </div>
-                                        <hr>
+                                        <hr class="hr hide">
                                         <div class="row urdu">
                                             <div class="col-md-12">
                                                 <h4>
@@ -1018,7 +1059,7 @@
                                                 کرونا کی احتیاطی تدابیر کےبارے میں معلومات <br>
                                             </div>
                                         </div>
-                                        <hr>
+                                        <hr class="hr">
 
                                         <div class="row urdu">
                                             <div class="col-md-12">
@@ -1035,40 +1076,40 @@
                                                        value="2" id="h137b" required>
                                                 نہیں <br></div>
                                         </div>
-                                        <hr>
+                                        <hr class="hr">
                                         <div class="row urdu h137aa hide">
                                             <div class="col-md-12">
                                                 <h4>
                                                     <small>h137a :</small>
                                                     کیا آپ(نام) کو حفاظتی ٹیکےکیوں نہیں لگوائے؟
                                                 </h4>
-                                                <input type="Radio" name="h137a"
-                                                       value="1" id="h137aaa">
+                                                <input type="checkbox" name="h137aa"
+                                                       value="1" id="h137aa">
                                                 اتنا اہم نہیں تھا <br>
-                                                <input type="Radio" name="h137aa"
-                                                       value="2" id="h137aab">
+                                                <input type="checkbox" name="h137ab"
+                                                       value="2" id="h137ab">
                                                 ہسپتال کرونا کی وجہ سے بند تھ <br>
-                                                <input type="Radio" name="h137aa"
-                                                       value="3" id="h137aac">
+                                                <input type="checkbox" name="h137ac"
+                                                       value="3" id="h137ac">
                                                 کرونا کا ڈریا خوف <br>
-                                                <input type="Radio" name="h137aa"
-                                                       value="4" id="h137aad">
+                                                <input type="checkbox" name="h137ad"
+                                                       value="4" id="h137ad">
                                                 سماجی مفاصلہ <br>
-                                                <input type="Radio" name="h137aa"
-                                                       value="5" id="h137aae">
+                                                <input type="checkbox" name="h137ae"
+                                                       value="5" id="h137ae">
                                                 کرونا کے لاک ڈائون کی وجہ سے سواری نہیں تھی <br>
-                                                <input type="Radio" name="h137aa"
-                                                       value="6" id="h137aabf">
+                                                <input type="checkbox" name="h137af"
+                                                       value="6" id="h137af">
                                                 حفاظتی سامان (ماسک، دستانے) گھر پر موجود نہیں تھے <br>
-                                                <input type="Radio" name="h137aa"
-                                                       value="7" id="h137aabg">
+                                                <input type="checkbox" name="h137ag"
+                                                       value="7" id="h137ag">
                                                 ڈاکٹر احتیاطی تدابیر پر عمل نہیں کر رہا تھا (ماسک اور دستانے نہیں
                                                 پہنےہوئے
                                                 تھے) <br>
 
                                             </div>
                                         </div>
-                                        <hr>
+                                        <hr class="hr hide">
 
                                         <div class="row urdu">
                                             <div class="col-md-12">
@@ -1085,7 +1126,7 @@
                                                        value="2" id="h209b" required>
                                                 نہیں <br></div>
                                         </div>
-                                        <hr>
+                                        <hr class="hr">
                                         <div class="row urdu h209aa hide">
                                             <div class="col-md-12">
                                                 <h4>
@@ -1093,28 +1134,33 @@
                                                     لیڈی ہیلتھ ورکر کا وزٹ نہیں کرنے کا سبب کیا تھا؟
                                                 </h4>
                                                 <input type="checkbox" name="h209aa"
+
                                                        value="1" id="h209aa">
                                                 ایل ایچھ ڈبلیو اکثر وزت پرنہیں آتی <br>
                                                 <input type="checkbox" name="h209ab"
                                                        value="2" id="h209ab">
                                                 ایل ایچھ ڈبلیوکرونا کی وجہ سےوزٹ نہیں کرسکی <br>
                                                 <input type="checkbox" name="h209ac"
+                                                       onclick="select3options(this, 'h209ac')"
                                                        value="3" id="h209ac">ایل ایچھ ڈبلیوآئی مگر ہم نے گھر میں
                                                 آنے نہیں دیا <br>
-                                                <input type="checkbox" name="h209ad"
-                                                       value="31" id="h209ad"> ایل ایچھ ڈبلیونے ماسک نہیں پہنا ہوا
-                                                تھا
-                                                <br>
-                                                <input type="checkbox" name="h209ae"
-                                                       value="32" id="h209ae"> کرونا کا ڈریا خوف <br>
-                                                <input type="checkbox" name="h209af"
-                                                       value="33" id="h209af">سماجی مفاصلا <br>
-                                                <input type="checkbox" name="h209ag"
-                                                       value="34" id="h209ag">حفاظتی سامان گھر پر موجود نہیں تھا
-                                                <br>
+                                                <div class="childHide hide">
+                                                    <input type="checkbox" name="h209ad"
+                                                           value="31" id="h209ad"> ایل ایچھ ڈبلیونے ماسک نہیں پہنا ہوا
+                                                    تھا
+                                                    <br>
+                                                    <input type="checkbox" name="h209ae"
+                                                           value="32" id="h209ae"> کرونا کا ڈریا خوف <br>
+                                                    <input type="checkbox" name="h209af"
+                                                           value="33" id="h209af">سماجی مفاصلا <br>
+                                                    <input type="checkbox" name="h209ag"
+                                                           value="34" id="h209ag">حفاظتی سامان گھر پر موجود نہیں تھا
+                                                    <br>
+                                                </div>
+
                                             </div>
                                         </div>
-                                        <hr>
+                                        <hr class="hr hide">
 
                                         <div class="row urdu">
                                             <div class="col-md-12">
@@ -1141,7 +1187,7 @@
                                                 کرونا کی وجہ سے مٹینگ نہیں ہوئی<br>
                                             </div>
                                         </div>
-                                        <hr>
+                                        <hr class="hr">
                                         <div class="row urdu">
                                             <div class="col-md-12">
                                                 <h4>
@@ -1159,7 +1205,7 @@
                                                        value="3" id="h216c" required>
                                                 کبھی سنا نہیں اس کے بارے میں <br></div>
                                         </div>
-                                        <hr>
+                                        <hr class="hr">
 
                                         <div class="row urdu h216aa hide">
                                             <div class="col-md-12">
@@ -1193,7 +1239,7 @@
 
                                             </div>
                                         </div>
-                                        <hr>
+                                        <hr class="hr hide">
                                         <p class="myheading">
                                             سیکشن آئی- بچوں کی
                                             صحت
@@ -1204,7 +1250,7 @@
                                             سے کم عمر بچوں میں دست(ڈائریا) اور نظام تنفس کے شدید انفیکشن </p>
 
 
-                                        <div class="row urdu">
+                                        <div class="row urdu i101">
                                             <div class="col-md-12">
                                                 <h4>
                                                     <small>i101 :</small>
@@ -1214,29 +1260,34 @@
                                                     پتلے
                                                     پاخانے)
                                                 </h4>
-                                                <input type="Radio" name="i101" onclick="skipQuestions('i207')"
+                                                <input type="Radio" name="i101"
+                                                       onclick="showSection('i105','i106','i125','i203')"
                                                        value="1" id="i101a" required>
                                                 ہاں <br>
-                                                <input type="Radio" name="i101" onclick="showQuestions('i207')"
+                                                <input type="Radio" name="i101"
+                                                       onclick="skipSection('i105','i106','i125','i203')"
                                                        value="2" id="i101b" required>
                                                 نہیں <br></div>
                                         </div>
-                                        <hr>
+                                        <hr class="hr">
 
-                                        <div class="row urdu">
+                                        <div class="row urdu i105 hide">
                                             <div class="col-md-12">
                                                 <h4>
                                                     <small>i105 :</small>
                                                     (نام) کو دستوں کی تکلیف ہونے پر کیا آپ نے علاج کروایا تھا؟
                                                 </h4>
-                                                <input type="Radio" name="i105" onclick="showQuestions('i125')"
+                                                <input type="Radio" name="i105" onclick="showMultiple('i125','i106')"
                                                        value="1" id="i105a" required>
-                                                ہاں <br><input type="Radio" name="i105"
-                                                               onclick="showQuestions('i106')"
-                                                               value="2" id="i105b" required>
-                                                نہیں <br></div>
+                                                ہاں <br>
+                                                <input type="Radio" name="i105"
+                                                       onclick="showMultiple('i106','i125')"
+                                                       value="2" id="i105b" required>
+                                                نہیں <br>
+                                            </div>
                                         </div>
-                                        <hr>
+                                        <hr class="hr hide">
+
                                         <div class="row urdu i106 hide">
                                             <div class="col-md-12">
                                                 <h4>
@@ -1245,30 +1296,19 @@
                                                 </h4>
                                                 <input type="Radio" name="i106"
                                                        value="1" id="i106a">
-                                                اس مسئلے کے لیے علاج کروانے کی ضرورت نہیں تھی <br>
+                                                اس مسئلے کے لیے علاج کروانے کی ضرورت نہیں تھی
                                                 <input type="Radio" name="i106" value="2"
-                                                       id="i106b"
-                                                >
-                                                صحت فراہم کرنے والے کو دینے کے لیے پیسے نہیں تھے<br>
-                                                <input type="Radio"
-                                                       name="i106"
-                                                       value="3"
-                                                       id="i106c"
-                                                >
-                                                ٹرانسپورٹ دستیاب نہیں تھی<br>
-                                                <input type="Radio" name="i106"
-                                                       value="4" id="i106d">
-                                                کوئی مرد گھر پر موجود نہیں تھا جو مرکزِ صحت تک لے جاتا<br>
-                                                <input
-                                                        type="Radio" name="i106"
-                                                        value="5" id="i106e">
-                                                گھر کے سربراہ/شوہر/ساس نے اجازت نہیں دی<br>
-                                                <input type="Radio"
-                                                       name="i106"
-                                                       value="6" id="i106f"
-                                                >
-                                                مرکزِصحت بہت دور تھا<br>
-                                                <br>
+                                                       id="i106b">
+                                                صحت فراہم کرنے والے کو دینے کے لیے پیسے نہیں تھے
+                                                <input type="Radio" name="i106" value="3"
+                                                       id="i106c">
+                                                ٹرانسپورٹ دستیاب نہیں تھی
+                                                <input type="Radio" name="i106" value="4" id="i106d">
+                                                کوئی مرد گھر پر موجود نہیں تھا جو مرکزِ صحت تک لے جاتا
+                                                <input type="Radio" name="i106" value="5" id="i106e">
+                                                گھر کے سربراہ/شوہر/ساس نے اجازت نہیں دی
+                                                <input type="Radio" name="i106" value="6" id="i106f">
+                                                مرکزِصحت بہت دور تھا
                                                 <input type="Radio" name="i106" value="7" id="i106j">
                                                 ہسپتال کرونا کی وجہ سے بند تھا<br>
                                                 <input type="Radio" name="i106" value="8" id="i106k">
@@ -1285,9 +1325,9 @@
                                                 تھے<br>
                                             </div>
                                         </div>
-                                        <hr>
+                                        <hr class="hr hide">
 
-                                        <div class="row urdu">
+                                        <div class="row urdu i125 hide">
                                             <div class="col-md-12">
                                                 <h4>
                                                     <small>i125 :</small>
@@ -1302,7 +1342,8 @@
                                                        value="2" id="i125b" required>
                                                 نہیں <br></div>
                                         </div>
-                                        <hr>
+                                        <hr class="hr hide">
+
                                         <div class="row urdu i125aa hide">
                                             <div class="col-md-12">
                                                 <h4>
@@ -1316,43 +1357,50 @@
                                                        value="2" id="i125aab">
                                                 ایل ایچھ ڈبلیوکرونا کی وجہ سےوزٹ نہیں کرسکی <br>
                                                 <input type="checkbox" name="i125ac"
+                                                       onclick="select3options(this,'i125ac')"
                                                        value="3" id="i125aac">ایل ایچھ ڈبلیوآئی مگر ہم نے گھر میں
                                                 آنے نہیں دیا <br>
-                                                <input type="checkbox" name="i125ad"
-                                                       value="31" id="i125aad"> ایل ایچھ ڈبلیونے ماسک نہیں پہنا ہوا
-                                                تھا
-                                                <br>
-                                                <input type="checkbox" name="i125ae"
-                                                       value="32" id="i125aae"> کرونا کا ڈریا خوف <br>
-                                                <input type="checkbox" name="i125af"
-                                                       value="33" id="i125aaf">سماجی مفاصلا <br>
-                                                <input type="checkbox" name="i125ag"
-                                                       value="34" id="i125aag">حفاظتی سامان گھر پر موجود نہیں تھا
-                                                <br>
+                                                <div class="childHide hide">
+                                                    <input type="checkbox" name="i125ad"
+                                                           value="31" id="i125aad"> ایل ایچھ ڈبلیونے ماسک نہیں پہنا ہوا
+                                                    تھا
+                                                    <br>
+                                                    <input type="checkbox" name="i125ae"
+                                                           value="32" id="i125aae"> کرونا کا ڈریا خوف <br>
+                                                    <input type="checkbox" name="i125af"
+                                                           value="33" id="i125aaf">سماجی مفاصلا <br>
+                                                    <input type="checkbox" name="i125ag"
+                                                           value="34" id="i125aag">حفاظتی سامان گھر پر موجود نہیں تھا
+                                                    <br>
+                                                </div>
+
                                             </div>
                                         </div>
-                                        <hr>
+                                        <hr class="hr hide">
 
                                         <p class="myheading">
                                             ARI نظام تنفس کا شدید انفیکشن
                                         </p>
-                                        <div class="row urdu">
+                                        <div class="row urdu i203 hide">
                                             <div class="col-md-12">
                                                 <h4>
                                                     <small>i203 :</small>
                                                     کیا کسی بچے کو پچھلے دو ہفتوں میں بخار کے ساتھ کھانسی کا مسئلہ درپیش
                                                     آیا۔ جیسے کہ سانس کا تیز چلنا/ یا سانس لینے میں دشواری؟
                                                 </h4>
-                                                <input type="Radio" name="i203" onclick="skipQuestions('j108')"
+                                                <input type="Radio" name="i203"
+                                                       onclick="showSection('i207','i208','i225','i225a')"
                                                        value="1" id="i203a" required>
                                                 ہاں<br>
-                                                <input type="Radio" name="i203" onclick="showQuestions('j108')"
+                                                <input type="Radio" name="i203"
+                                                       onclick="skipSection('i207','i208','i225','i225a')"
                                                        value="2" id="i203b" required>
                                                 نہیں<br>
                                             </div>
                                         </div>
-                                        <hr>
-                                        <div class="row urdu">
+                                        <hr class="hr hide">
+
+                                        <div class="row urdu i207">
                                             <div class="col-md-12">
                                                 <h4>
                                                     <small>i207 :</small>
@@ -1360,15 +1408,17 @@
                                                     کروایا
                                                     تھا؟
                                                 </h4>
-                                                <input type="Radio" name="i207" onclick="showQuestions('i225')"
+                                                <input type="Radio" name="i207"
+                                                       onclick="showMultiple('i225','i208')"
                                                        value="1" id="i207a" required>
                                                 ہاں<br>
-                                                <input type="Radio" name="i207" onclick="showQuestions('i208')"
+                                                <input type="Radio" name="i207"
+                                                       onclick="showMultiple('i208','i225')"
                                                        value="2" id="i207b" required>
                                                 نہیں<br>
                                             </div>
                                         </div>
-                                        <hr>
+                                        <hr class="hr">
                                         <div class="row urdu i208 hide">
                                             <div class="col-md-12">
                                                 <h4>
@@ -1425,7 +1475,7 @@
                                                 تھے<br>
                                             </div>
                                         </div>
-                                        <hr>
+                                        <hr class="hr hide">
                                         <div class="row urdu i225 hide">
                                             <div class="col-md-12">
                                                 <h4>
@@ -1442,9 +1492,9 @@
                                                 نہیں<br>
                                             </div>
                                         </div>
-                                        <hr>
+                                        <hr class="hr hide">
 
-                                        <div class="row urdu">
+                                        <div class="row urdu i225a hide">
                                             <div class="col-md-12">
                                                 <h4>
                                                     <small>i225a :</small>
@@ -1457,22 +1507,26 @@
                                                        value="2" id="i225ab">
                                                 ایل ایچھ ڈبلیوکرونا کی وجہ سےوزٹ نہیں کرسکی <br>
                                                 <input type="checkbox" name="i225ac"
+                                                       onclick="select3options(this,'i225ac')"
                                                        value="3" id="i225ac">ایل ایچھ ڈبلیوآئی مگر ہم نے گھر میں
                                                 آنے نہیں دیا <br>
-                                                <input type="checkbox" name="i225ad"
-                                                       value="31" id="i225ad"> ایل ایچھ ڈبلیونے ماسک نہیں پہنا ہوا
-                                                تھا
-                                                <br>
-                                                <input type="checkbox" name="i225ae"
-                                                       value="32" id="i225ae"> کرونا کا ڈریا خوف <br>
-                                                <input type="checkbox" name="i225af"
-                                                       value="33" id="i225af">سماجی مفاصلا <br>
-                                                <input type="checkbox" name="i225ag"
-                                                       value="34" id="i225ag">حفاظتی سامان گھر پر موجود نہیں تھا
-                                                <br>
+                                                <div class="childHide hide">
+                                                    <input type="checkbox" name="i225ad"
+                                                           value="31" id="i225ad"> ایل ایچھ ڈبلیونے ماسک نہیں پہنا ہوا
+                                                    تھا
+                                                    <br>
+                                                    <input type="checkbox" name="i225ae"
+                                                           value="32" id="i225ae"> کرونا کا ڈریا خوف <br>
+                                                    <input type="checkbox" name="i225af"
+                                                           value="33" id="i225af">سماجی مفاصلا <br>
+                                                    <input type="checkbox" name="i225ag"
+                                                           value="34" id="i225ag">حفاظتی سامان گھر پر موجود نہیں تھا
+                                                    <br>
+                                                </div>
+
                                             </div>
                                         </div>
-                                        <hr>
+                                        <hr class="hr hide">
 
                                         <p class="myheading">
                                             سیکشن جے: حفاظتی
@@ -1508,7 +1562,7 @@
                                                        value="98" id="j108c" required>
                                                 معلوم نہیں<br></div>
                                         </div>
-                                        <hr>
+                                        <hr class="hr">
 
                                         <div class="row urdu j123 hide">
                                             <div class="col-md-12">
@@ -1611,7 +1665,7 @@
                                                 معلوم نہیں<br>
                                             </div>
                                         </div>
-                                        <hr>
+                                        <hr class="hr hide">
                                         <p class="myheading">
                                             سیکشن کے : خاندانی
                                             منصوبہ بندی
@@ -1636,7 +1690,7 @@
                                                        value="2" id="k107b" required>
                                                 نہیں<br></div>
                                         </div>
-                                        <hr>
+                                        <hr class="hr">
                                         <div class="row urdu k107aa hide">
                                             <div class="col-md-12">
                                                 <h4>
@@ -1652,20 +1706,23 @@
                                                 <input type="checkbox" name="k107ac"
                                                        value="3" id="k107aac">ایل ایچھ ڈبلیوآئی مگر ہم نے گھر میں
                                                 آنے نہیں دیا <br>
-                                                <input type="checkbox" name="k107ad"
-                                                       value="31" id="k107aad"> ایل ایچھ ڈبلیونے ماسک نہیں پہنا ہوا
-                                                تھا
-                                                <br>
-                                                <input type="checkbox" name="k107ae"
-                                                       value="32" id="k107aae"> کرونا کا ڈریا خوف <br>
-                                                <input type="checkbox" name="k107af"
-                                                       value="33" id="k107aaf">سماجی مفاصلا <br>
-                                                <input type="checkbox" name="k107ag"
-                                                       value="34" id="k107aag">حفاظتی سامان گھر پر موجود نہیں تھا
-                                                <br>
+                                                <div class="childHide hide">
+                                                    <input type="checkbox" name="k107ad"
+                                                           value="31" id="k107aad"> ایل ایچھ ڈبلیونے ماسک نہیں پہنا ہوا
+                                                    تھا
+                                                    <br>
+                                                    <input type="checkbox" name="k107ae"
+                                                           value="32" id="k107aae"> کرونا کا ڈریا خوف <br>
+                                                    <input type="checkbox" name="k107af"
+                                                           value="33" id="k107aaf">سماجی مفاصلا <br>
+                                                    <input type="checkbox" name="k107ag"
+                                                           value="34" id="k107aag">حفاظتی سامان گھر پر موجود نہیں تھا
+                                                    <br>
+                                                </div>
+
                                             </div>
                                         </div>
-                                        <hr>
+                                        <hr class="hr hide">
                                         <p class="myheading">
                                             سیکشن او
                                         </p>
@@ -1707,7 +1764,7 @@
                                                 دیگر وضاحت کریں<br>
                                             </div>
                                         </div>
-                                        <hr>
+                                        <hr class="hr">
 
                                         <p>آپ کے وقت دینے کا بہت شکریہ۔ آپ نے جو معلومات فراہم کی ہیں، وہ ہمیں صحت کی
                                             خدمات
@@ -1720,7 +1777,8 @@
                                             <div class="col-md-12">
                                                 <div class="form-group  ">
                                                     <label for="remarks" class="urdu">ریمارکس </label>
-                                                    <textarea name="remarks" id="remarks" cols="75" rows="5"></textarea>
+                                                    <textarea name="remarks" class="inp" id="remarks" cols="75"
+                                                              rows="5"></textarea>
                                                 </div>
                                             </div>
                                         </div>
@@ -1825,10 +1883,57 @@
     }
 
     function showQuestions(skipQues) {
-        $('.' + skipQues).removeClass('hide');
+        $('.' + skipQues).removeClass('hide').next('.hr').removeClass('hide');
+        var j = $('.' + skipQues + ' input');
+        $.each(j, function (i, v) {
+            $(v).val([]);
+        });
     }
 
     function skipQuestions(skipQues) {
-        $('.' + skipQues).addClass('hide');
+        $('.' + skipQues).addClass('hide').next('.hr').addClass('hide');
+        var j = $('.' + skipQues + ' input');
+        $.each(j, function (i, v) {
+            $(v).val([]);
+        });
+    }
+
+    function skipSection(skipQues1, skipQues2, skipQues3, skipQues4, skipQues5) {
+        $('.' + skipQues1).addClass('hide').next('.hr').addClass('hide');
+        $('.' + skipQues2).addClass('hide').next('.hr').addClass('hide');
+        $('.' + skipQues3).addClass('hide').next('.hr').addClass('hide');
+        $('.' + skipQues4).addClass('hide').next('.hr').addClass('hide');
+        $('.' + skipQues5).addClass('hide').next('.hr').addClass('hide');
+        var j = $('.' + skipQues1 + ' input');
+        $.each(j, function (i, v) {
+            $(v).val([]);
+        });
+
+    }
+
+    function showSection(skipQues1, skipQues2, skipQues3, skipQues4, skipQues5) {
+        $('.' + skipQues1).removeClass('hide').next('.hr').removeClass('hide');
+        $('.' + skipQues2).removeClass('hide').next('.hr').removeClass('hide');
+        $('.' + skipQues3).removeClass('hide').next('.hr').removeClass('hide');
+        $('.' + skipQues4).removeClass('hide').next('.hr').removeClass('hide');
+        $('.' + skipQues5).removeClass('hide').next('.hr').removeClass('hide');
+    }
+
+    function select3options(obj, select) {
+        var opt1 = $("#" + select + ":checked").val();
+        if (opt1 != '' && opt1 != undefined) {
+            $(obj).parent('div').find('.childHide').removeClass('hide');
+        } else {
+            $(obj).parent('div').find('.childHide').addClass('hide');
+        }
+        var j = $("#" + select + ' input');
+        $.each(j, function (i, v) {
+            $(v).val([]);
+        });
+    }
+
+    function showMultiple(skipQues, skipQuest2) {
+        $('.' + skipQues).removeClass('hide').next('.hr').removeClass('hide');
+        $('.' + skipQuest2).addClass('hide').next('.hr').addClass('hide');
     }
 </script>
