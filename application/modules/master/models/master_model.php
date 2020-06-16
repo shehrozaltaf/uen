@@ -40,7 +40,8 @@ class Master_model extends CI_Model
 
     function _insert($table, $data)
     {
-        $this->db->insert($table, $data);
+        $this->uen_ml_local = $this->load->database('uen_ml_local', TRUE);
+        $this->uen_ml_local->insert($table, $data);
     }
 
     function _update($table, $id, $data)

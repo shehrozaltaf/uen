@@ -48,7 +48,8 @@
                         
                         <div class="form-group">
                           <label class="control-label">Email</label>
-                          <input type="text" name="email" id="email" class="form-control" placeholder="Email" value="<?php echo set_value('email', $this->session->userdata('email')); ?>">
+                            <input type="text" name="email" id="email" class="form-control" placeholder="Email"
+                                   value="<?php echo set_value('email', $this->session->userdata('email')); ?>">
                         </div>
                         
                         <div class="form-group">
@@ -103,7 +104,8 @@
                         
                         <div class="form-group">
                           <label class="control-label">Username</label>
-                          <input type="text" name="username" id="username" class="form-control" placeholder="Username" value="<?php echo set_value('username', $this->session->userdata('username')); ?>">
+                            <input type="text" name="username" id="username" class="form-control" placeholder="Username"
+                                   value="<?php echo set_value('username', $this->session->userdata('username')); ?>">
                         </div>
                         
                         

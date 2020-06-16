@@ -22,12 +22,9 @@ class Forms extends MX_Controller
 
     public function submitForm()
     {
-
         if (!$this->users->logged_in()) {
             redirect('index.php/users/login', 'refresh');
         }
-
-
         $this->form_validation->set_rules('cluster_no', 'کلسٹر نمبر', 'required|trim|xss_clean');
         $this->form_validation->set_rules('hhno', ' گھریلو نمبر', 'required|trim|xss_clean');
         $this->form_validation->set_rules('hhhead', 'گھر کے سربراہ کا نام', 'required|trim|xss_clean');
@@ -35,30 +32,18 @@ class Forms extends MX_Controller
         $this->form_validation->set_rules('d103', ' بچے کا نام', 'required|trim|xss_clean');
         if ($this->form_validation->run() == TRUE) {
             $data = array();
+            $data['createdBy'] = $this->users->logged_in();
+            $data['createdDateTime'] = date('Y-m-d h:i:s');
             foreach ($_POST as $k => $v) {
                 if ($k != 'submit') {
                     $data[$k] = $v;
                 }
-
             }
-            /*$data = array(
-                'username' => $this->input->post('username'),
-                'email' => $this->input->post('email'),
-                'password' => $this->input->post('password'),
-                'full_name' => $this->input->post('full_name'),
-                'designation' => $this->input->post('designation'),
-                'contact' => $this->input->post('contact'),
-                'district' => $this->input->post('district'),
-                'type' => $this->input->post('type'),
-                'app' => $app,
-                'enable' => 1,
-                'status' => 0,
-            );*/
             $this->master->_insert('covidq', $data);
             $flash_msg = "Form Submit successfully";
             $value = '<div class="callout callout-success"><p>' . $flash_msg . '</p></div>';
             $this->session->set_flashdata('message', $value);
-            redirect('index.php/Forms/submitForm');
+            redirect('Forms/submitForm');
         }
 
         $this->data['heading'] = "Forms";
