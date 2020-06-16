@@ -512,7 +512,7 @@
                                                         required>
                                                     <option value="0">دن</option>
                                                     <?php for ($d = 1; $d <= 31; $d++) {
-                                                        echo '<option value="' . $d . '">' . $d . '</option>';
+                                                        echo '<option value="' . $d . '" ' . set_select('e106a', $d) . '>' . $d . '</option>';
                                                     } ?>
                                                 </select>
                                                 <!--<input type="input" name="e106a" maxlength="2" min="0" max="31"
@@ -524,7 +524,7 @@
                                                         style="width: 15%; margin-bottom: 10px">
                                                     <option value="0">مہینہ</option>
                                                     <?php for ($m = 1; $m <= 12; $m++) {
-                                                        echo '<option value="' . $m . '">' . $m . '</option>';
+                                                        echo '<option value="' . $m . '" ' . set_select('e106b', $m) . '>' . $m . '</option>';
                                                     } ?>
                                                 </select>
                                                 <!--<input type="input" max="12" name="e106b" maxlength="2" min="0"
@@ -537,7 +537,7 @@
                                                         style="width: 15%; margin-bottom: 10px">
                                                     <option value="0">سال</option>
                                                     <?php for ($y = 2010; $y <= 2020; $y++) {
-                                                        echo '<option value="' . $y . '">' . $y . '</option>';
+                                                        echo '<option value="' . $y . '" ' . set_select('e106c', $y) . '>' . $y . '</option>';
                                                     } ?>
                                                 </select>
                                                 <!--<input type="input" name="e106c" maxlength="4" id="e106c" min="0"
