@@ -207,6 +207,29 @@ $db['uen_ml'] = array(
 	'save_queries' => TRUE
 );
 
+
+$db['uen_ml_local'] = array(
+    'dsn' => '',
+    'hostname' => 'f38158',
+    'username' => 'sa',
+    'password' => 'sa',
+    'database' => 'uen_ml',
+    'dbdriver' => 'sqlsrv',
+    'dbprefix' => '',
+    'pconnect' => FALSE,
+    'db_debug' => (ENVIRONMENT !== 'production'),
+    'cache_on' => FALSE,
+    'cachedir' => '',
+    'char_set' => 'utf8',
+    'dbcollat' => 'utf8_general_ci',
+    'swap_pre' => '',
+    'encrypt' => FALSE,
+    'compress' => FALSE,
+    'stricton' => FALSE,
+    'failover' => array(),
+    'save_queries' => TRUE
+);
+
 /*
 $db['default'] = array(
 	'dsn'	=> '',
