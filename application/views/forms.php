@@ -1965,7 +1965,6 @@
         }
     }
 
-
     function showQuestionsOthers(skipQues) {
         if ($('#j123w').is(':checked')) {
             $('.' + skipQues).removeClass('hide').next('.hr').removeClass('hide');
@@ -1974,7 +1973,6 @@
             $('.' + skipQues).addClass('hide').next('.hr').addClass('hide');
             $('.' + skipQues).find('input').removeAttr('required', 'required');
         }
-
         var j = $('.' + skipQues + ' input');
         $.each(j, function (i, v) {
             $(v).val([]);
