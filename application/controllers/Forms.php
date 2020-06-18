@@ -31,6 +31,7 @@ class Forms extends MX_Controller
         $this->form_validation->set_rules('d102', 'جواب دہندگان / ایم ڈبلیو آر اے کا نام', 'required|trim|xss_clean');
         $this->form_validation->set_rules('d103', ' بچے کا نام', 'required|trim|xss_clean');
         if ($this->form_validation->run() == TRUE) {
+
             $data = array();
             $data['createdBy'] = $this->users->logged_in();
             $data['createdDateTime'] = date('Y-m-d h:i:s');

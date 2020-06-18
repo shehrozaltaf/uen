@@ -223,7 +223,7 @@
                                                 سماجی مفاصلہ <br>
                                                 <input type="checkBox" name="f101am" value="13"
                                                        id="f101am" <?php echo set_checkbox('f101am', '13'); ?>>
-                                                کرونا کے لاک ڈائون کی وجہ سے سواری نہیں تھی br>
+                                                کرونا کے لاک ڈائون کی وجہ سے سواری نہیں تھی <br>
                                                 <input type="checkBox" name="f101an" value="14"
                                                        id="f101an" <?php echo set_checkbox('f101an', '14'); ?>>
                                                 حفاظتی سامان (ماسک، دستانے) گھر پر موجود نہیں تھے <br>
@@ -390,7 +390,7 @@
                                                 سماجی مفاصلہ <br>
                                                 <input type="checkBox" name="f130m" value="13"
                                                        id="f130m" <?php echo set_checkbox('f130m', '13'); ?>>
-                                                کرونا کے لاک ڈائون کی وجہ سے سواری نہیں تھی br>
+                                                کرونا کے لاک ڈائون کی وجہ سے سواری نہیں تھی <br>
                                                 <input type="checkBox" name="f130n" value="14"
                                                        id="f130n" <?php echo set_checkbox('f130n', '14'); ?>>
                                                 حفاظتی سامان (ماسک، دستانے) گھر پر موجود نہیں تھے <br>
@@ -618,7 +618,7 @@
                                                 <input type="checkBox"
                                                        name="g103m" <?php echo set_checkbox('g103m', '13'); ?>
                                                        value="13" id="g103m">
-                                                کرونا کے لاک ڈائون کی وجہ سے سواری نہیں تھی br>
+                                                کرونا کے لاک ڈائون کی وجہ سے سواری نہیں تھی<br>
                                                 <input type="checkBox"
                                                        name="g103n" <?php echo set_checkbox('g103n', '14'); ?>
                                                        value="14" id="g103n">
@@ -785,7 +785,7 @@
                                                 سماجی مفاصلہ <br>
                                                 <input type="checkBox" name="h125am" value="13"
                                                        id="h125am" <?php echo set_checkbox('h125am', '13'); ?>>
-                                                کرونا کے لاک ڈائون کی وجہ سے سواری نہیں تھی br>
+                                                کرونا کے لاک ڈائون کی وجہ سے سواری نہیں تھی <br>
                                                 <input type="checkBox" name="h125an" value="14"
                                                        id="h125an" <?php echo set_checkbox('h125an', '14'); ?>>
                                                 حفاظتی سامان (ماسک، دستانے) گھر پر موجود نہیں تھے <br>
@@ -1239,44 +1239,44 @@
                                                     <small>i106 :</small>
                                                     (نام) کو دستوں کی تکلیف ہونے پر آپ نے کیوں علاج نہیں کروایا ؟
                                                 </h4>
-                                                <input type="Radio" name="i106"
-                                                    <?php echo set_radio('i106', '1'); ?>
+                                                <input type="checkbox" name="i106a"
+                                                    <?php echo set_radio('i106a', '1'); ?>
                                                        value="1" id="i106a">
-                                                اس مسئلے کے لیے علاج کروانے کی ضرورت نہیں تھی
-                                                <input type="Radio" name="i106"
-                                                       value="2" <?php echo set_radio('i106', '2'); ?>
+                                                اس مسئلے کے لیے علاج کروانے کی ضرورت نہیں تھی<br>
+                                                <input type="checkbox" name="i106b"
+                                                       value="2" <?php echo set_radio('i106b', '2'); ?>
                                                        id="i106b">
-                                                صحت فراہم کرنے والے کو دینے کے لیے پیسے نہیں تھے
-                                                <input type="Radio" name="i106"
-                                                       value="3" <?php echo set_radio('i106', '3'); ?>
+                                                صحت فراہم کرنے والے کو دینے کے لیے پیسے نہیں تھے<br>
+                                                <input type="checkbox" name="i106c"
+                                                       value="3" <?php echo set_radio('i106c', '3'); ?>
                                                        id="i106c">
-                                                ٹرانسپورٹ دستیاب نہیں تھی
-                                                <input type="Radio" name="i106" value="4"
-                                                       <?php echo set_radio('i106', '4'); ?>id="i106d">
-                                                کوئی مرد گھر پر موجود نہیں تھا جو مرکزِ صحت تک لے جاتا
-                                                <input type="Radio" name="i106" value="5"
-                                                       <?php echo set_radio('i106', '5'); ?>id="i106e">
-                                                گھر کے سربراہ/شوہر/ساس نے اجازت نہیں دی
-                                                <input type="Radio" name="i106"
-                                                       value="6" <?php echo set_radio('i106', '6'); ?> id="i106f">
-                                                مرکزِصحت بہت دور تھا
-                                                <input type="Radio" name="i106" value="7"
-                                                       <?php echo set_radio('i106', '7'); ?>id="i106j">
+                                                ٹرانسپورٹ دستیاب نہیں تھی<br>
+                                                <input type="checkbox" name="i106d" value="4"
+                                                    <?php echo set_radio('i106d', '4'); ?> id="i106d">
+                                                کوئی مرد گھر پر موجود نہیں تھا جو مرکزِ صحت تک لے جاتا<br>
+                                                <input type="checkbox" name="i106e" value="5"
+                                                    <?php echo set_radio('i106e', '5'); ?> id="i106e">
+                                                گھر کے سربراہ/شوہر/ساس نے اجازت نہیں دی<br>
+                                                <input type="checkbox" name="i106f"
+                                                       value="6" <?php echo set_radio('i106f', '6'); ?> id="i106f">
+                                                مرکزِصحت بہت دور تھا<br>
+                                                <input type="checkbox" name="i106g" value="7"
+                                                    <?php echo set_radio('i106g', '7'); ?> id="i106g">
                                                 ہسپتال کرونا کی وجہ سے بند تھا<br>
-                                                <input type="Radio" name="i106"
-                                                       value="8" <?php echo set_radio('i106', '8'); ?> id="i106k">
+                                                <input type="checkbox" name="i106h"
+                                                       value="8" <?php echo set_radio('i106h', '8'); ?> id="i106h">
                                                 کرونا کا ڈریا خوف<br>
-                                                <input type="Radio" name="i106"
-                                                       value="9" <?php echo set_radio('i106', '9'); ?> id="i106l">
+                                                <input type="checkbox" name="i106i"
+                                                       value="9" <?php echo set_radio('i106i', '9'); ?> id="i106i">
                                                 سماجی مفاصلہ <br>
-                                                <input type="Radio" name="i106"
-                                                       value="10" <?php echo set_radio('i106', '10'); ?> id="i106m">
-                                                کرونا کے لاک ڈائون کی وجہ سے سواری نہیں تھی br>
-                                                <input type="Radio" name="i106"
-                                                       value="11" <?php echo set_radio('i106', '11'); ?> id="i106n">
+                                                <input type="checkbox" name="i106j"
+                                                       value="10" <?php echo set_radio('i106j', '10'); ?> id="i106j">
+                                                کرونا کے لاک ڈائون کی وجہ سے سواری نہیں تھی<br>
+                                                <input type="checkbox" name="i106k"
+                                                       value="11" <?php echo set_radio('i106k', '11'); ?> id="i106k">
                                                 حفاظتی سامان (ماسک، دستانے) گھر پر موجود نہیں تھے <br>
-                                                <input type="Radio" name="i106"
-                                                       value="12" <?php echo set_radio('i106', '12'); ?> id="i106o">
+                                                <input type="checkbox" name="i106l"
+                                                       value="12" <?php echo set_radio('i106l', '12'); ?> id="i106l">
                                                 ڈاکٹر احتیاطی تدابیر پر عمل نہیں کر رہا تھا (ماسک اور دستانے نہیں
                                                 پہنےہوئے
                                                 تھے<br>
@@ -1460,7 +1460,7 @@
                                                 <input type="checkBox"
                                                        name="i208l" <?php echo set_checkbox('i208l', '12'); ?>
                                                        value="12" id="i208l">
-                                                کرونا کے لاک ڈائون کی وجہ سے سواری نہیں تھی br>
+                                                کرونا کے لاک ڈائون کی وجہ سے سواری نہیں تھی<br>
                                                 <input type="checkBox"
                                                        name="i208m" <?php echo set_checkbox('i208m', '13'); ?>
                                                        value="13" id="i208m">
@@ -1697,7 +1697,7 @@
                                                 تھے<br>
                                                 <input type="checkBox"
                                                        name="j123w" <?php echo set_checkbox('j123w', '96'); ?>
-                                                       onclick="showQuestions('j123wx')"
+                                                       onclick="showQuestionsOthers('j123wx')"
                                                        value="96" id="j123w">
                                                 دیگر(وضاحت کریں) <br>
                                                 <input type="checkBox"
@@ -1804,39 +1804,39 @@
                                                     انٹرویو کا نتیجہ:
                                                 </h4>
                                                 <input type="Radio" name="o108" <?php echo set_radio('k107', '1'); ?>
-                                                       onclick="skipQuestions('o108x')"
+                                                       onclick="skipQuestionsInp('o108x')"
                                                        value="1" id="o108a" required>
                                                 مکمل <br>
                                                 <input type="Radio" name="o108" <?php echo set_radio('k107', '2'); ?>
-                                                       onclick="skipQuestions('o108x')"
+                                                       onclick="skipQuestionsInp('o108x')"
                                                        value="2" id="o108b" required>
                                                 انکار کردیا<br>
                                                 <input type="Radio" name="o108" <?php echo set_radio('o108', '3'); ?>
-                                                       onclick="skipQuestions('o108x')"
+                                                       onclick="skipQuestionsInp('o108x')"
                                                        value="3" id="o108c" required>
                                                 رہائش مستقل طور پر بند ہے <br>
                                                 <input type="Radio" name="o108" <?php echo set_radio('o108', '4'); ?>
-                                                       onclick="skipQuestions('o108x')"
+                                                       onclick="skipQuestionsInp('o108x')"
                                                        value="4" id="o108d" required>
                                                 رہائش عارضی طور پر بند ہے<br>
                                                 <input type="Radio" name="o108" <?php echo set_radio('o108', '5'); ?>
-                                                       onclick="skipQuestions('o108x')"
+                                                       onclick="skipQuestionsInp('o108x')"
                                                        value="5" id="o108e" required>
                                                 التواع<br>
                                                 <input type="Radio" name="o108" <?php echo set_radio('o108', '6'); ?>
-                                                       onclick="skipQuestions('o108x')"
+                                                       onclick="skipQuestionsInp('o108x')"
                                                        value="6" id="o108f" required>
                                                 رہائش گاہ خالی ہے <br>
                                                 <input type="Radio" name="o108" <?php echo set_radio('o108', '7'); ?>
-                                                       onclick="skipQuestions('o108x')"
+                                                       onclick="skipQuestionsInp('o108x')"
                                                        value="7" id="o108g" required>
                                                 نا مکمل<br>
                                                 <input type="Radio" name="o108" <?php echo set_radio('o108', '8'); ?>
-                                                       onclick="skipQuestions('o108x')"
+                                                       onclick="skipQuestionsInp('o108x')"
                                                        value="8" id="o108h" required>
                                                 کرونا کی بیماری کی وجہ سےجوب نہیں ملا<br>
                                                 <input type="Radio" name="o108" <?php echo set_radio('o108', '96'); ?>
-                                                       onclick="showQuestions('o108x')"
+                                                       onclick="showQuestionsInp('o108x')"
                                                        value="96" id="o108i" required>
                                                 دیگر وضاحت کریں<br>
                                             </div>
@@ -1869,7 +1869,7 @@
                                             <div class="col-md-12">
                                                 <div class="form-group  ">
                                                     <label for="remarks" class="urdu">ریمارکس </label>
-                                                    <textarea name="remarks" class="inp" id="remarks" cols="75"
+                                                    <textarea name="remarks" class="inp" id="remarks" cols="75" required
                                                               rows="5"></textarea>
                                                 </div>
                                             </div>
@@ -1963,6 +1963,40 @@
         } else {
             alert('Something went wrong');
         }
+    }
+
+
+    function showQuestionsOthers(skipQues) {
+        if ($('#j123w').is(':checked')) {
+            $('.' + skipQues).removeClass('hide').next('.hr').removeClass('hide');
+            $('.' + skipQues).find('input').attr('required', 'required');
+        } else {
+            $('.' + skipQues).addClass('hide').next('.hr').addClass('hide');
+            $('.' + skipQues).find('input').removeAttr('required', 'required');
+        }
+
+        var j = $('.' + skipQues + ' input');
+        $.each(j, function (i, v) {
+            $(v).val([]);
+        });
+    }
+
+    function showQuestionsInp(skipQues) {
+        $('.' + skipQues).removeClass('hide').next('.hr').removeClass('hide');
+        $('.' + skipQues).find('input').attr('required', 'required');
+        var j = $('.' + skipQues + ' input');
+        $.each(j, function (i, v) {
+            $(v).val([]);
+        });
+    }
+
+    function skipQuestionsInp(skipQues) {
+        $('.' + skipQues).addClass('hide').next('.hr').addClass('hide');
+        $('.' + skipQues).find('input').removeAttr('required', 'required');
+        var j = $('.' + skipQues + ' input');
+        $.each(j, function (i, v) {
+            $(v).val([]);
+        });
     }
 
     function showQuestions(skipQues) {
