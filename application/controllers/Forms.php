@@ -7,7 +7,7 @@ class Forms extends MX_Controller
     function __construct()
     {
         parent::__construct();
-        $this->spc = $this->load->database('default', TRUE);
+        $this->uen_ml = $this->load->database('uen_ml', TRUE);
         $this->form_validation->CI =& $this;
         $this->data = null;
         $this->load->vars('current_url', $this->uri->uri_to_assoc(1));
@@ -40,13 +40,12 @@ class Forms extends MX_Controller
                     $data[$k] = $v;
                 }
             }
-            $this->master->_insert('covidq', $data);
+            $this->master->_forminsert('covidq', $data);
             $flash_msg = "Form Submit successfully";
             $value = '<div class="callout callout-success"><p>' . $flash_msg . '</p></div>';
             $this->session->set_flashdata('message', $value);
             redirect('Forms/submitForm');
         }
-
         $this->data['heading'] = "Forms";
         $this->data['main_content'] = 'forms';
         $this->load->view('includes/template', $this->data);
@@ -55,7 +54,7 @@ class Forms extends MX_Controller
     public function checkCluster()
     {
         $result = array();
-        $this->uen_ml_local = $this->load->database('uen_ml_local', TRUE);
+        $this->uen_ml_local = $this->load->database('uen_ml', TRUE);
         $flag = 0;
         if (isset($_POST['cluster_no']) && $_POST['cluster_no'] != '') {
             $cluster = $_POST['cluster_no'];
@@ -71,7 +70,7 @@ class Forms extends MX_Controller
         }
 
         if ($flag == 0) {
-            $cluster = $this->uen_ml_local->query("SELECT cluster_code,hhno FROM [dbo].[covid_clusters] where cluster_code='" . $cluster . "' 
+            $cluster = $this->uen_ml_local->query("SELECT cluster_code,hhno FROM covid_clusters where cluster_code='" . $cluster . "' 
         and hhno='" . $hhno . "' group by cluster_code,hhno");
             if ($cluster->num_rows() > 0) {
                 foreach ($cluster->result() as $row) {

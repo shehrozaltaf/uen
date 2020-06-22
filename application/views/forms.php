@@ -1390,11 +1390,11 @@
                                                 </h4>
                                                 <input type="Radio" name="i207" <?php echo set_radio('i207', '1'); ?>
                                                        onclick="showMultiple('i225','i208')"
-                                                       value="1" id="i207a" required>
+                                                       value="1" id="i207a">
                                                 ہاں<br>
                                                 <input type="Radio" name="i207" <?php echo set_radio('i207', '2'); ?>
                                                        onclick="showMultiple('i208','i225')"
-                                                       value="2" id="i207b" required>
+                                                       value="2" id="i207b">
                                                 نہیں<br>
                                             </div>
                                         </div>
