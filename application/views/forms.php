@@ -1203,12 +1203,12 @@
                                                 </h4>
                                                 <input type="Radio" name="i101"
                                                     <?php echo set_radio('i101', '1'); ?>
-                                                       onclick="showSection('i105','i106','i125','i203')"
+                                                       onclick="showSection('i105','i106','i125','')"
                                                        value="1" id="i101a" required>
                                                 ہاں <br>
                                                 <input type="Radio" name="i101"
                                                     <?php echo set_radio('i101', '2'); ?>
-                                                       onclick="skipSection('i105','i106','i125','i203')"
+                                                       onclick="skipSection('i105','i106','i125','')"
                                                        value="2" id="i101b" required>
                                                 نہیں <br></div>
                                         </div>
@@ -1361,7 +1361,7 @@
                                         </div>
                                         <hr class="hr">
 
-                                        <div class="row urdu i203 hide">
+                                        <div class="row urdu i203">
                                             <div class="col-md-12">
                                                 <h4>
                                                     <small>i203 :</small>
