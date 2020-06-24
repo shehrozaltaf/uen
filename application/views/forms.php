@@ -1378,7 +1378,7 @@
                                                 نہیں<br>
                                             </div>
                                         </div>
-                                        <hr class="hr hide">
+                                        <hr class="hr">
 
                                         <div class="row urdu i207">
                                             <div class="col-md-12">
